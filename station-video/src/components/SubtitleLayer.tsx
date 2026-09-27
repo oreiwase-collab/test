@@ -12,7 +12,7 @@ const wrapJapanese = (text: string, max = 22): string => {
   if (given.length > 1) return given.slice(0, 2).join("\n");
 
   const compact = cleanSubtitle(given[0] || text).replace(/\s+/gu, "");
-  if (compact.length <= 11) return compact;
+  if (compact.length <= max) return compact;
 
   const target = Math.ceil(compact.length / 2);
   const minimum = Math.max(6, compact.length - max);

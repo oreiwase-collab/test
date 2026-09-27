@@ -1,12 +1,12 @@
 {
-  "ok": true,
+  "ok": false,
   "project": "/home/user/test/station-video",
   "anchorsFile": "/home/user/test/station-video/inputs/sync-anchors.json",
-  "checkedAt": "2026-09-27T16:32:45.253Z",
-  "errors": [],
-  "warnings": [
-    "finished-video cut detection was skipped; pass --video after rendering"
+  "checkedAt": "2026-09-27T16:59:05.503Z",
+  "errors": [
+    "finished video has no detected hard cut near 129.833s for \"この問題は、1人\""
   ],
+  "warnings": [],
   "anchors": [
     {
       "id": "reveal-001-stop",
@@ -1089,5 +1089,40 @@
       "errorMs": -10.033333333353767
     }
   ],
-  "detectedCuts": []
+  "detectedCuts": [
+    6.566667,
+    14.566667,
+    28.433333,
+    32.566667,
+    41.066667,
+    48.833333,
+    55.833333,
+    63.7,
+    73.566667,
+    81.133333,
+    88.166667,
+    90.866667,
+    100.066667,
+    109,
+    121.1,
+    137.366667,
+    146.266667,
+    157.566667,
+    167.333333,
+    174.633333,
+    181.433333,
+    191.633333,
+    201.733333,
+    213.366667,
+    224,
+    230.5,
+    240.966667,
+    253.366667,
+    261.533333,
+    271.1,
+    278.566667,
+    280.533333,
+    287.266667,
+    291.866667
+  ]
 }

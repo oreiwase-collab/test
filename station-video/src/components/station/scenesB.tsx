@@ -146,18 +146,32 @@ export const S16: React.FC<SceneProps> = ({f, R}) => {
   );
 };
 
-/* 17 街の作りそのもの — skyline warped by a generative field */
+/* 17 街の作りそのもの — top-down city map warped by a generative field */
 export const S17: React.FC<SceneProps> = ({f, R}) => {
   const warp = rv(f, R.city, 30);
+  const blocks = Array.from({length: 7 * 4}, (_, i) => ({c: i % 7, r: Math.floor(i / 7)}));
   return (
     <>
       <Svg>
-        <Skyline f={f} idPrefix="s17" />
-        <g opacity={0.25 + warp * 0.6}>
+        <rect width={1920} height={1080} fill="#0E1320" />
+        {blocks.map(({c, r}, i) => {
+          const skew = Math.sin(c * 0.9 + r * 1.3 + f / 40) * 18 * warp;
+          return (
+            <rect key={i} x={120 + c * 245 + skew} y={330 + r * 170 - skew * 0.5} width={200} height={130} rx={4}
+              fill={rnd(i) > 0.7 ? "#1D2A3A" : "#172030"} stroke="#2A3548" strokeWidth={3}
+              transform={`rotate(${skew * 0.15} ${220 + c * 245} ${395 + r * 170})`} />
+          );
+        })}
+        {Array.from({length: 40}, (_, i) => {
+          const lane = i % 4;
+          const x = ((rnd(i) * 1900 + f * (2 + (i % 3))) % 1900) + 10;
+          return <circle key={i} cx={x} cy={308 + lane * 170} r={6} fill={C.paper} opacity={0.6} />;
+        })}
+        <g opacity={0.2 + warp * 0.6}>
           <FlowField f={f} count={110} color={C.gold} opacity={0.45} seed={3} />
         </g>
       </Svg>
-      <KeyText id="s17-key" text="街の作りが変わった" x={960} y={170} size={80} width={1100} reveal={warp} />
+      <KeyText id="s17-key" text="街の作りが変わった" x={960} y={120} size={80} width={1100} reveal={warp} />
     </>
   );
 };
