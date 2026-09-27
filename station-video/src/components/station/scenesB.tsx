@@ -43,7 +43,7 @@ export const S14: React.FC<SceneProps> = ({f, R}) => {
         <rect width={1920} height={1080} fill="#151A25" />
         <g clipPath="url(#s14-glass)">
           <g filter="url(#s14-blur)" opacity={1 - door * 0.45}>
-            <Concourse f={f} pan={1} idPrefix="s14" people />
+            <Concourse f={f} pan={1} idPrefix="s14" people signText={false} />
           </g>
           <rect x={980} y={110} width={760} height={760} fill="#0B0F18" opacity={door * 0.35} />
         </g>
@@ -327,7 +327,7 @@ export const S23: React.FC<SceneProps> = ({f, R}) => {
       {xs.map((x, i) => (
         <Label key={i} id={`s23-yen-${i}`} text="¥ 有料" x={x + 20} y={330} size={30} align="center" chip color={C.gold} reveal={rv(f, (R.yen ?? 0) + i * 6, 10)} />
       ))}
-      <Label id="s23-floor" text="街の共有スペース" x={960} y={900} size={30} align="center" color={C.dim} reveal={rv(f, R.rise, 12)} />
+      <Label id="s23-floor" text="街の共有スペース" x={960} y={720} size={30} align="center" color={C.dim} reveal={rv(f, R.rise, 12)} />
     </>
   );
 };

@@ -436,30 +436,36 @@ export const PodPhoto: React.FC<{
 
 /* ---------- Station architecture ---------- */
 
-export const StationSign: React.FC<{id: string; x: number; y: number; text: string; w?: number; color?: string}> = ({
+export const StationSign: React.FC<{id: string; x: number; y: number; text: string; w?: number; color?: string; showText?: boolean}> = ({
   id,
   x,
   y,
   text,
   w = 300,
   color = "#E6C36A",
+  showText = true,
 }) => (
   <g transform={`translate(${x} ${y})`}>
     <rect x={0} y={0} width={w} height={64} rx={6} fill="#141A26" stroke="#2C3446" strokeWidth={4} />
     <rect x={10} y={10} width={44} height={44} rx={4} fill={color} />
-    <text data-layout-box={id} x={70} y={44} fill={C.white} fontFamily={FONT} fontWeight={700} fontSize={30}>
-      {text}
-    </text>
+    {showText ? (
+      <text data-layout-box={id} x={70} y={44} fill={C.white} fontFamily={FONT} fontWeight={700} fontSize={30}>
+        {text}
+      </text>
+    ) : (
+      <rect x={70} y={22} width={w - 100} height={20} rx={4} fill={C.white} opacity={0.5} />
+    )}
   </g>
 );
 
 // Side-on concourse with pillars, ceiling lights and signs. `pan` scrolls layers at different speeds.
-export const Concourse: React.FC<{f: number; pan?: number; idPrefix: string; people?: boolean; sepia?: boolean}> = ({
+export const Concourse: React.FC<{f: number; pan?: number; idPrefix: string; people?: boolean; sepia?: boolean; signText?: boolean}> = ({
   f,
   pan = 1,
   idPrefix,
   people = true,
   sepia = false,
+  signText = true,
 }) => {
   const far = (f * 0.4 * pan) % 480;
   const mid = (f * 1.1 * pan) % 520;
@@ -480,9 +486,9 @@ export const Concourse: React.FC<{f: number; pan?: number; idPrefix: string; peo
       ))}
       {/* signs on far wall */}
       <g transform={`translate(${-far * 0.5} 0)`}>
-        <StationSign id={`${idPrefix}-sign1`} x={240} y={200} text="中央改札" />
-        <StationSign id={`${idPrefix}-sign2`} x={880} y={200} text="1・2番線" color="#6FA7D8" />
-        <StationSign id={`${idPrefix}-sign3`} x={1480} y={200} text="出口 東口" color="#E0E0E0" w={320} />
+        <StationSign id={`${idPrefix}-sign1`} x={240} y={200} text="中央改札" showText={signText} />
+        <StationSign id={`${idPrefix}-sign2`} x={880} y={200} text="1・2番線" color="#6FA7D8" showText={signText} />
+        <StationSign id={`${idPrefix}-sign3`} x={1480} y={200} text="出口 東口" color="#E0E0E0" w={320} showText={signText} />
       </g>
       {/* pillars */}
       {Array.from({length: 5}, (_, i) => (
