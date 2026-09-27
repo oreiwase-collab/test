@@ -1,0 +1,734 @@
+<title>アニメーション見本帳</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+  /* 映写室のような暗い一画面デザインで固定（単一テーマ） */
+  :root {
+    color-scheme: dark;
+    --ground: #0F1117;
+    --panel: #161922;
+    --line: #272B37;
+    --text: #E7E9EF;
+    --muted: #8D93A4;
+    --accent: #F2B56B;
+    --display: "Dela Gothic One", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    --body: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+    --mono: "DM Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+  body {
+    background: var(--ground);
+    color: var(--text);
+    font-family: var(--body);
+    font-size: 15px;
+    line-height: 1.7;
+    padding-inline: 16px;
+    padding-block: 40px 64px;
+  }
+  .wrap { max-width: 1240px; margin: 0 auto; }
+  header h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(30px, 5vw, 50px);
+    line-height: 1.2;
+    margin: 0;
+    text-wrap: balance;
+  }
+  header h1 span { color: var(--accent); }
+  header p { color: var(--muted); max-width: 62ch; margin: 14px 0 0; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
+    gap: 28px 22px;
+    margin-top: 36px;
+  }
+  figure { margin: 0; display: flex; flex-direction: column; gap: 12px; }
+  .stage {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #07080C;
+    border: 1px solid var(--line);
+  }
+  .stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  figcaption { display: flex; flex-direction: column; gap: 4px; }
+  .tag {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  figcaption h2 { font-size: 18px; margin: 0; line-height: 1.4; font-weight: 700; }
+  figcaption p { margin: 0; color: var(--muted); font-size: 14px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; max-width: 72ch; }
+  footer code { font-family: var(--mono); color: var(--text); }
+
+  /* 01 CSS */
+  .css-demo { display: grid; place-items: center; }
+  .css-bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(120deg, #1B2340, #3B1F4A, #12404A, #1B2340);
+    background-size: 300% 300%;
+    animation: flow 9s ease-in-out infinite;
+  }
+  @keyframes flow { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+  .css-inner { position: relative; display: flex; flex-direction: column; align-items: center; gap: 26px; }
+  .spinners { display: flex; gap: 34px; align-items: center; }
+  .ring { width: 38px; height: 38px; border-radius: 50%; border: 4px solid rgba(255,255,255,.18); border-top-color: #F2B56B; animation: spin 1s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .dots { display: flex; gap: 7px; }
+  .dots i, .bars i { display: block; background: #9FE3D8; }
+  .dots i { width: 10px; height: 10px; border-radius: 50%; animation: hop 1s ease-in-out infinite; }
+  .dots i:nth-child(2) { animation-delay: .15s; } .dots i:nth-child(3) { animation-delay: .3s; }
+  @keyframes hop { 0%,100% { transform: translateY(6px); opacity: .5; } 50% { transform: translateY(-8px); opacity: 1; } }
+  .bars { display: flex; gap: 4px; align-items: center; height: 38px; }
+  .bars i { width: 5px; height: 100%; border-radius: 3px; background: #E88FB4; animation: eq 1.1s ease-in-out infinite; }
+  .bars i:nth-child(2) { animation-delay: .1s; } .bars i:nth-child(3) { animation-delay: .2s; }
+  .bars i:nth-child(4) { animation-delay: .3s; } .bars i:nth-child(5) { animation-delay: .4s; }
+  @keyframes eq { 0%,100% { transform: scaleY(.3); } 50% { transform: scaleY(1); } }
+  .css-btn {
+    font: 700 14px var(--body); color: #0F1117; background: #F2B56B; border: 0; border-radius: 999px;
+    padding: 10px 22px; cursor: pointer; transition: transform .25s cubic-bezier(.3,1.6,.5,1);
+    animation: glow 2.4s ease-in-out infinite;
+  }
+  .css-btn:hover { transform: scale(1.08) rotate(-2deg); }
+  .css-btn:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+  @keyframes glow { 0%,100% { box-shadow: 0 0 0 0 rgba(242,181,107,.55); } 50% { box-shadow: 0 0 0 12px rgba(242,181,107,0); } }
+
+  /* 02 SVG */
+  .svg-demo { background: #0D1526; }
+  .svg-demo svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .draw { fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 0; animation: draw 6s ease-in-out infinite; animation-delay: var(--d, 0s); }
+  @keyframes draw { 0% { stroke-dashoffset: 1; } 30%, 88% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -1; } }
+
+  /* 11 Neon & glitch */
+  .neon-demo {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+    background:
+      repeating-linear-gradient(0deg, transparent 0 22px, rgba(255,255,255,.025) 22px 23px),
+      repeating-linear-gradient(90deg, transparent 0 46px, rgba(255,255,255,.025) 46px 47px),
+      #120E16;
+  }
+  .neon {
+    font: 400 clamp(38px, 9vw, 64px)/1 var(--display); color: #FFE3F4; letter-spacing: .06em;
+    text-shadow: 0 0 4px #fff, 0 0 12px #FF4FB8, 0 0 26px #FF4FB8, 0 0 48px #C0268A;
+    animation: flicker 4s linear infinite;
+  }
+  @keyframes flicker { 0%,18%,22%,62%,64%,100% { opacity: 1; } 20%,63% { opacity: .35; } }
+  .glitch { position: relative; font: 500 clamp(22px, 5vw, 34px)/1 var(--mono); color: #E9F6FF; letter-spacing: .12em; }
+  .glitch::before, .glitch::after { content: attr(data-text); position: absolute; inset: 0; }
+  .glitch::before { color: #3CF0FF; animation: gl1 2.2s steps(1) infinite; mix-blend-mode: screen; }
+  .glitch::after { color: #FF3C6E; animation: gl2 2.2s steps(1) infinite; mix-blend-mode: screen; }
+  @keyframes gl1 { 0%,100% { clip-path: inset(0 0 0 0); transform: translate(-2px,0); } 20% { clip-path: inset(10% 0 60% 0); transform: translate(-6px,1px); } 40% { clip-path: inset(55% 0 15% 0); transform: translate(4px,-1px); } 60% { clip-path: inset(30% 0 40% 0); transform: translate(-3px,0); } 80% { clip-path: inset(75% 0 5% 0); transform: translate(5px,1px); } }
+  @keyframes gl2 { 0%,100% { clip-path: inset(0 0 0 0); transform: translate(2px,0); } 20% { clip-path: inset(65% 0 10% 0); transform: translate(5px,0); } 40% { clip-path: inset(5% 0 70% 0); transform: translate(-5px,1px); } 60% { clip-path: inset(45% 0 30% 0); transform: translate(3px,-1px); } 80% { clip-path: inset(20% 0 55% 0); transform: translate(-4px,0); } }
+  .sub-neon { font: 400 12px var(--mono); color: #7BF0E6; letter-spacing: .3em; text-shadow: 0 0 8px #2BD9C9; }
+
+  /* 12 Kinetic type */
+  .kinetic-demo { display: grid; place-items: center; transition: background-color .4s; }
+  .kword { font: 400 clamp(36px, 8.5vw, 60px)/1 var(--display); white-space: nowrap; will-change: transform, opacity; }
+  .kcount { position: absolute; left: 14px; bottom: 10px; font: 12px var(--mono); opacity: .6; }
+
+  /* 14 ASCII */
+  .ascii-demo { display: grid; place-items: center; background: #0B0A08; }
+  .ascii-demo pre { margin: 0; font-family: var(--mono); line-height: 1; color: #F2B56B; text-shadow: 0 0 6px rgba(242,181,107,.45); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .stage *, .stage *::before, .stage *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>コードで作る<span>アニメーション</span>見本帳</h1>
+    <p>下の15枚はすべて、画像素材を使わずにコードだけで描いて動かしています。どれも Claude Code に頼めば同じように作れます。静止画として見るときは、それぞれの動きの途中の一場面です。</p>
+  </header>
+
+  <div class="grid">
+    <figure>
+      <div class="stage css-demo">
+        <div class="css-bg"></div>
+        <div class="css-inner">
+          <div class="spinners" aria-hidden="true">
+            <span class="ring"></span>
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="bars"><i></i><i></i><i></i><i></i><i></i></span>
+          </div>
+          <button class="css-btn" type="button" id="css-btn">ボタンに触れてみて</button>
+        </div>
+      </div>
+      <figcaption><span class="tag">CSS Animation</span><h2>UIの動き・ローディング</h2><p>回転スピナー、跳ねる点、イコライザー、流れるグラデーション背景、ホバーで弾むボタン。</p></figcaption>
+    </figure>
+
+    <figure>
+      <div class="stage svg-demo">
+        <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <polygon id="morph" fill="#F2B56B" opacity=".9"></polygon>
+          <circle class="draw" pathLength="1" cx="236" cy="62" r="22" stroke="#F2B56B" stroke-width="2.5" style="--d:.2s"/>
+          <path class="draw" pathLength="1" d="M14 168 L78 84 L116 126 L168 56 L232 148 L266 116 L306 168" stroke="#9FE3D8" stroke-width="2.5"/>
+          <path class="draw" pathLength="1" d="M14 168 H306" stroke="#5C6B8F" stroke-width="2" style="--d:.4s"/>
+          <path class="draw" pathLength="1" d="M150 168 C138 178 176 182 160 196" stroke="#6FA8FF" stroke-width="2" style="--d:.7s"/>
+          <path class="draw" pathLength="1" d="M92 44 q6 -6 12 0 q6 -6 12 0 M124 30 q5 -5 10 0 q5 -5 10 0" stroke="#E7E9EF" stroke-width="1.6" style="--d:1s"/>
+        </svg>
+      </div>
+      <figcaption><span class="tag">SVG</span><h2>線画が描かれていく・図形の変形</h2><p>山や太陽の線が一筆書きのように現れ、左上の図形は星と円のあいだを行き来します。ロゴ演出やアイコンに向いています。</p></figcaption>
+    </figure>
+
+    <figure>
+      <div class="stage" data-demo="particles"></div>
+      <figcaption><span class="tag">Canvas 2D</span><h2>パーティクル・ネットワーク</h2><p>漂う点どうしが近づくと線でつながります。マウスを近づけると点が逃げます。ヒーロー背景の定番です。</p></figcaption>
+    </figure>
+
+    <figure>
+      <div class="stage" data-demo="shader"></div>
+      <figcaption><span class="tag">WebGL Shader</span><h2>シェーダーの光と色</h2><p>画面の全ピクセルをGPUで計算して、オーロラのように流れる色を作ります。炎、水面、宇宙などにも応用できます。</p></figcaption>
+    </figure>
+
+    <figure>
+      <div class="stage" data-demo="torus"></div>
+      <figcaption><span class="tag">3D / Three.js 系</span><h2>回転する3Dオブジェクト</h2><p>ドーナツ型のワイヤーフレームを3Dで回転させ、手前ほど明るく描いています。Three.js を使えば質感や照明もつけられます。</p></figcaption>
+    </figure>
+
+    <figure>
+      <div class="stage" data-demo="flow"></div>
+      <figcaption><span class="tag">Generative / p5.js 系</span><h2>ジェネラティブアート</h2><p>数式でできた「流れ」の上を無数の粒が進み、軌跡が絵になっていきます。毎回ちがう模様になります。</p></figcaption>
+    </figure>
+
+    <figure>
+      <div class="stage" data-demo="bars"></div>
+      <figcaption><span class="tag">Data Viz</span><h2>動くグラフ（バーチャートレース）</h2><p>数値の変化に合わせて棒が伸び縮みし、順位が入れ替わります。数値はデモ用の架空データです。</p></figcaption>
+    </figure>
+
+    <figure>
+      <div class="stage" data-demo="math"></div>
+      <figcaption><span class="tag">Math / Manim 風</span><h2>数学の図解アニメーション</h2><p>円を回る点の高さが、そのままサインカーブとして右へ流れていきます。3Blue1Brown のような解説動画の表現です。</p></figcaption>
+    </figure>
+
+    <figure>
+      <div class="stage" data-demo="walker"></div>
+      <figcaption><span class="tag">Character</span><h2>棒人間の歩行アニメーション</h2><p>関節の角度を計算して手足を動かしています。解説動画の登場人物や、ゲームのキャラクターに使えます。</p></figcaption>
+    </figure>
+
+    <figure>
+      <div class="stage" data-demo="pixel"></div>
+      <figcaption><span class="tag">Pixel Art</span><h2>レトロゲーム風ドット絵</h2><p>80×50ドットの小さな画面に描いてから拡大しています。キャラクターが走ってジャンプし、雲と地面が流れます。</p></figcaption>
+    </figure>
+
+    <figure>
+      <div class="stage neon-demo">
+        <div class="neon">OPEN</div>
+        <div class="glitch" data-text="GLITCH">GLITCH</div>
+        <div class="sub-neon">24 HOURS</div>
+      </div>
+      <figcaption><span class="tag">CSS Effects</span><h2>ネオン・グリッチ</h2><p>ネオン管のようにちらつく文字と、映像がバグったようにずれる文字。サイバーパンク風の演出に使えます。</p></figcaption>
+    </figure>
+
+    <figure>
+      <div class="stage kinetic-demo" data-demo="kinetic">
+        <div class="kword">ことばが</div>
+        <div class="kcount">1 / 5</div>
+      </div>
+      <figcaption><span class="tag">Kinetic Typography</span><h2>文字が動くタイポグラフィ</h2><p>単語ごとに、滑り込む、落ちて弾む、回りながら現れる、ぐっと大きくなる、と違う動きで登場します。</p></figcaption>
+    </figure>
+
+    <figure>
+      <div class="stage" data-demo="parallax"></div>
+      <figcaption><span class="tag">Parallax</span><h2>奥行きのある風景（パララックス）</h2><p>手前の山ほど速く、奥の山ほどゆっくり流れることで奥行きが生まれます。スクロール演出にも使えます。</p></figcaption>
+    </figure>
+
+    <figure>
+      <div class="stage ascii-demo" data-demo="ascii"><pre aria-hidden="true"></pre></div>
+      <figcaption><span class="tag">ASCII / Terminal</span><h2>文字だけで描く3D</h2><p>記号の濃さで明るさを表し、回転するドーナツを文字だけで描いています。ターミナルの中でも同じように動きます。</p></figcaption>
+    </figure>
+
+    <figure>
+      <div class="stage" data-demo="rain"></div>
+      <figcaption><span class="tag">Weather FX</span><h2>雨と雷の天候エフェクト</h2><p>斜めに降る雨粒が地面ではね、ときどき稲妻が光ります。雪や桜吹雪にも同じ仕組みで変えられます。</p></figcaption>
+    </figure>
+  </div>
+
+  <footer>
+    動画ファイルにしたい場合は、同じ描き方を <code>Remotion</code>（React）や <code>Manim</code>（Python）で書いて MP4 に書き出せます。3DCG なら <code>Blender</code> の Python スクリプト、アプリ用の軽いアニメーションなら <code>Lottie</code> の JSON でも作れます。
+  </footer>
+</div>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const TAU = Math.PI * 2;
+  const demos = [];
+
+  function makeCanvas(stage, webgl) {
+    const c = document.createElement('canvas');
+    stage.prepend(c);
+    const ctx = webgl ? null : c.getContext('2d');
+    const size = { w: 0, h: 0, dpr: 1 };
+    function fit() {
+      const r = stage.getBoundingClientRect();
+      size.dpr = Math.min(window.devicePixelRatio || 1, 2);
+      size.w = r.width; size.h = r.height;
+      c.width = Math.max(1, Math.round(r.width * size.dpr));
+      c.height = Math.max(1, Math.round(r.height * size.dpr));
+      if (ctx) ctx.setTransform(size.dpr, 0, 0, size.dpr, 0, 0);
+    }
+    fit();
+    return { c, ctx, size, fit };
+  }
+
+  const rand = (a, b) => a + Math.random() * (b - a);
+
+  const setups = {
+    particles(stage) {
+      const { ctx, size, fit } = makeCanvas(stage);
+      const mouse = { x: -999, y: -999 };
+      stage.addEventListener('pointermove', e => { const r = stage.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
+      stage.addEventListener('pointerleave', () => { mouse.x = mouse.y = -999; });
+      let pts = [];
+      function seed() {
+        const n = Math.round(size.w * size.h / 1500);
+        pts = Array.from({ length: n }, () => ({ x: rand(0, size.w), y: rand(0, size.h), vx: rand(-.35, .35), vy: rand(-.35, .35) }));
+      }
+      seed();
+      return {
+        resize() { fit(); seed(); },
+        frame() {
+          const { w, h } = size;
+          ctx.fillStyle = '#081018'; ctx.fillRect(0, 0, w, h);
+          for (const p of pts) {
+            const dx = p.x - mouse.x, dy = p.y - mouse.y, d = Math.hypot(dx, dy);
+            if (d < 70) { p.x += dx / d * 2; p.y += dy / d * 2; }
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0 || p.x > w) p.vx *= -1;
+            if (p.y < 0 || p.y > h) p.vy *= -1;
+          }
+          for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
+            const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
+            if (d < 88) { ctx.strokeStyle = `rgba(120,220,210,${(1 - d / 88) * .55})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+          }
+          ctx.fillStyle = '#D8FFF9';
+          for (const p of pts) { ctx.beginPath(); ctx.arc(p.x, p.y, 1.8, 0, TAU); ctx.fill(); }
+        }
+      };
+    },
+
+    shader(stage) {
+      const { c, fit } = makeCanvas(stage, true);
+      const gl = c.getContext('webgl');
+      if (!gl) { stage.insertAdjacentHTML('beforeend', '<p style="position:absolute;inset:0;display:grid;place-items:center;color:#8D93A4">この端末では WebGL が使えません</p>'); return { frame() {} }; }
+      const vs = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+      const fs = `precision mediump float;uniform vec2 r;uniform float t;
+      void main(){vec2 p=(gl_FragCoord.xy*2.-r)/min(r.x,r.y);float v=0.;
+      v+=sin(p.x*3.+t);v+=sin((p.y*3.+t)*.8);v+=sin(p.x*2.+p.y*2.+t*1.3);
+      vec2 q=p+vec2(sin(t*.5),cos(t*.4));v+=sin(length(q)*4.-t*2.);v*=.5;
+      vec3 col=.5+.5*cos(v*3.14159+vec3(0.,2.1,4.2)+t*.2);
+      col*=.55+.45*smoothstep(1.8,.2,length(p));gl_FragColor=vec4(col,1.);}`;
+      const sh = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return s; };
+      const pr = gl.createProgram();
+      gl.attachShader(pr, sh(gl.VERTEX_SHADER, vs)); gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, fs));
+      gl.linkProgram(pr); gl.useProgram(pr);
+      gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, -1,1, 1,-1, 1,1]), gl.STATIC_DRAW);
+      const loc = gl.getAttribLocation(pr, 'p');
+      gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+      const ur = gl.getUniformLocation(pr, 'r'), ut = gl.getUniformLocation(pr, 't');
+      return {
+        resize: fit,
+        frame(t) { gl.viewport(0, 0, c.width, c.height); gl.uniform2f(ur, c.width, c.height); gl.uniform1f(ut, t * .8); gl.drawArrays(gl.TRIANGLES, 0, 6); }
+      };
+    },
+
+    torus(stage) {
+      const { ctx, size, fit } = makeCanvas(stage);
+      const U = 28, V = 14, R = 1, r = .42;
+      const pts = [];
+      for (let i = 0; i < U; i++) for (let j = 0; j < V; j++) {
+        const u = i / U * TAU, v = j / V * TAU;
+        pts.push([(R + r * Math.cos(v)) * Math.cos(u), r * Math.sin(v), (R + r * Math.cos(v)) * Math.sin(u)]);
+      }
+      return {
+        resize: fit,
+        frame(t) {
+          const { w, h } = size;
+          const g = ctx.createRadialGradient(w / 2, h / 2, 0, w / 2, h / 2, w * .6);
+          g.addColorStop(0, '#1C1830'); g.addColorStop(1, '#07080C');
+          ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
+          const ax = t * .6, ay = t * .9, s = Math.min(w, h) * .95;
+          const cx = Math.cos(ax), sx = Math.sin(ax), cy = Math.cos(ay), sy = Math.sin(ay);
+          const P = pts.map(([x, y, z]) => {
+            let y1 = y * cx - z * sx, z1 = y * sx + z * cx;
+            let x2 = x * cy + z1 * sy, z2 = -x * sy + z1 * cy;
+            const k = s / (z2 + 3.6);
+            return [w / 2 + x2 * k, h / 2 + y1 * k, z2];
+          });
+          ctx.lineWidth = 1.1;
+          const line = (a, b) => {
+            const d = (a[2] + b[2]) / 2, al = .15 + .85 * (1 - (d + 1.5) / 3);
+            ctx.strokeStyle = `rgba(242,181,107,${Math.max(.08, al)})`;
+            ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); ctx.stroke();
+          };
+          for (let i = 0; i < U; i++) for (let j = 0; j < V; j++) {
+            const a = P[i * V + j];
+            line(a, P[((i + 1) % U) * V + j]);
+            line(a, P[i * V + (j + 1) % V]);
+          }
+        }
+      };
+    },
+
+    flow(stage) {
+      const { ctx, size, fit } = makeCanvas(stage);
+      let ps = [];
+      function seed() {
+        ctx.fillStyle = '#0A0B12'; ctx.fillRect(0, 0, size.w, size.h);
+        ps = Array.from({ length: 520 }, () => ({ x: rand(0, size.w), y: rand(0, size.h), life: rand(40, 220) }));
+      }
+      seed();
+      const field = (x, y, t) => Math.sin(x * .011 + t * .15) * 1.7 + Math.cos(y * .013 - t * .1) * 1.7 + Math.sin((x + y) * .004) * 2;
+      return {
+        resize() { fit(); seed(); },
+        frame(t) {
+          const { w, h } = size;
+          ctx.fillStyle = 'rgba(10,11,18,.035)'; ctx.fillRect(0, 0, w, h);
+          ctx.lineWidth = 1;
+          for (const p of ps) {
+            const a = field(p.x, p.y, t), nx = p.x + Math.cos(a) * 1.4, ny = p.y + Math.sin(a) * 1.4;
+            const hue = 180 + (p.x / w) * 150;
+            ctx.strokeStyle = `hsla(${hue},80%,68%,.55)`;
+            ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(nx, ny); ctx.stroke();
+            p.x = nx; p.y = ny; p.life--;
+            if (p.life < 0 || p.x < 0 || p.x > w || p.y < 0 || p.y > h) { p.x = rand(0, w); p.y = rand(0, h); p.life = rand(40, 220); }
+          }
+        }
+      };
+    },
+
+    bars(stage) {
+      const { ctx, size, fit } = makeCanvas(stage);
+      const items = [
+        { name: '東京', base: 82, amp: 14, ph: 0 },
+        { name: '大阪', base: 74, amp: 20, ph: 1.7 },
+        { name: '名古屋', base: 60, amp: 22, ph: 3.1 },
+        { name: '福岡', base: 58, amp: 24, ph: 4.4 },
+        { name: '札幌', base: 50, amp: 18, ph: 5.6 },
+      ].map((d, i) => ({ ...d, y: i }));
+      const font = getComputedStyle(document.body).getPropertyValue('--body');
+      return {
+        resize: fit,
+        frame(t) {
+          const { w, h } = size;
+          ctx.fillStyle = '#0C0F17'; ctx.fillRect(0, 0, w, h);
+          items.forEach(d => d.v = d.base + d.amp * Math.sin(t * .35 + d.ph));
+          const sorted = [...items].sort((a, b) => b.v - a.v);
+          sorted.forEach((d, i) => d.y += (i - d.y) * .2);
+          const left = 62, top = 34, right = 48, rowH = (h - top - 16) / items.length, max = 110;
+          const scale = v => (w - left - right) * v / max;
+          ctx.font = `600 11px ${font}`; ctx.fillStyle = '#8D93A4'; ctx.textBaseline = 'middle';
+          ctx.fillText('月間来場者数（架空データ・千人）', 14, 16);
+          ctx.strokeStyle = 'rgba(255,255,255,.07)'; ctx.lineWidth = 1;
+          for (let v = 0; v <= 100; v += 25) { const x = left + scale(v); ctx.beginPath(); ctx.moveTo(x, top - 6); ctx.lineTo(x, h - 12); ctx.stroke(); }
+          const leader = sorted[0];
+          items.forEach(d => {
+            const y = top + d.y * rowH, bh = rowH * .62;
+            ctx.fillStyle = d === leader ? '#F2B56B' : '#4E6DA8';
+            ctx.beginPath(); ctx.roundRect(left, y, scale(d.v), bh, 4); ctx.fill();
+            ctx.fillStyle = '#E7E9EF'; ctx.font = `700 13px ${font}`; ctx.textAlign = 'right';
+            ctx.fillText(d.name, left - 10, y + bh / 2);
+            ctx.textAlign = 'left'; ctx.font = `500 12px ui-monospace, Menlo, monospace`; ctx.fillStyle = '#C9CDD8';
+            ctx.fillText(Math.round(d.v), left + scale(d.v) + 6, y + bh / 2);
+          });
+          ctx.textAlign = 'left';
+        }
+      };
+    },
+
+    math(stage) {
+      const { ctx, size, fit } = makeCanvas(stage);
+      const hist = [];
+      return {
+        resize() { fit(); hist.length = 0; },
+        frame(t) {
+          const { w, h } = size;
+          ctx.fillStyle = '#0B0B0D'; ctx.fillRect(0, 0, w, h);
+          const R = Math.min(h * .3, w * .14), cx = R + 28, cy = h / 2, x0 = cx + R + 30;
+          const th = t * 1.4;
+          const px = cx + R * Math.cos(th), py = cy - R * Math.sin(th);
+          ctx.strokeStyle = 'rgba(255,255,255,.25)'; ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.moveTo(cx - R - 12, cy); ctx.lineTo(w - 12, cy); ctx.stroke();
+          ctx.beginPath(); ctx.moveTo(cx, cy - R - 12); ctx.lineTo(cx, cy + R + 12); ctx.stroke();
+          ctx.beginPath(); ctx.moveTo(x0, cy - R - 12); ctx.lineTo(x0, cy + R + 12); ctx.stroke();
+          ctx.strokeStyle = '#58C4DD'; ctx.lineWidth = 2.5;
+          ctx.beginPath(); ctx.arc(cx, cy, R, 0, TAU); ctx.stroke();
+          ctx.strokeStyle = '#83C167'; ctx.lineWidth = 2;
+          ctx.beginPath(); ctx.arc(cx, cy, R * .28, 0, -th % TAU, true); ctx.stroke();
+          ctx.strokeStyle = '#E7E9EF'; ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(px, py); ctx.stroke();
+          ctx.strokeStyle = '#FC6255'; ctx.beginPath(); ctx.moveTo(px, cy); ctx.lineTo(px, py); ctx.stroke();
+          hist.unshift(py); if (hist.length > w) hist.pop();
+          ctx.strokeStyle = '#F0D264'; ctx.lineWidth = 2.5; ctx.beginPath();
+          hist.forEach((y, i) => { const x = x0 + i * 1.4; if (x > w - 10) return; i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }); ctx.stroke();
+          ctx.setLineDash([4, 4]); ctx.strokeStyle = 'rgba(240,210,100,.6)'; ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(x0, py); ctx.stroke(); ctx.setLineDash([]);
+          ctx.fillStyle = '#F0D264'; ctx.beginPath(); ctx.arc(x0, py, 4, 0, TAU); ctx.fill();
+          ctx.fillStyle = '#FFFFFF'; ctx.beginPath(); ctx.arc(px, py, 4, 0, TAU); ctx.fill();
+          ctx.font = 'italic 17px "Times New Roman", Georgia, serif'; ctx.fillStyle = '#F0D264';
+          ctx.fillText('y = sin θ', x0 + 14, 26);
+          ctx.fillStyle = '#83C167'; ctx.fillText('θ', cx + R * .34, cy - 8);
+        }
+      };
+    },
+
+    walker(stage) {
+      const { ctx, size, fit } = makeCanvas(stage);
+      function limb(x, y, a1, l1, a2, l2) {
+        const kx = x + Math.sin(a1) * l1, ky = y + Math.cos(a1) * l1;
+        const fx = kx + Math.sin(a1 + a2) * l2, fy = ky + Math.cos(a1 + a2) * l2;
+        ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(kx, ky); ctx.lineTo(fx, fy); ctx.stroke();
+      }
+      return {
+        resize: fit,
+        frame(t) {
+          const { w, h } = size;
+          const g = ctx.createLinearGradient(0, 0, 0, h); g.addColorStop(0, '#1A2238'); g.addColorStop(1, '#2A2440');
+          ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
+          const gy = h * .8, L = h * .17, ph = t * 5.2;
+          ctx.fillStyle = '#12151F'; ctx.fillRect(0, gy, w, h - gy);
+          ctx.strokeStyle = 'rgba(255,255,255,.18)'; ctx.lineWidth = 2;
+          const off = (t * L * 2.1) % 40;
+          for (let x = -off; x < w; x += 40) { ctx.beginPath(); ctx.moveTo(x, gy + 12); ctx.lineTo(x + 18, gy + 12); ctx.stroke(); }
+          const bob = Math.abs(Math.sin(ph)) * 4;
+          const hx = w / 2, hy = gy - L * 2 + bob - 2;
+          ctx.fillStyle = 'rgba(0,0,0,.35)'; ctx.beginPath(); ctx.ellipse(hx, gy + 2, L * .55, 5, 0, 0, TAU); ctx.fill();
+          ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.lineWidth = 5;
+          const legs = s => { const a = Math.sin(ph + s) * .55; const k = -Math.max(0, Math.sin(ph + s + 1.2)) * .9 - .05; limb(hx, hy, a, L, k, L); };
+          const arms = (s, sy) => { const a = -Math.sin(ph + s) * .6; limb(hx, sy, a, L * .75, -.35 - Math.max(0, -Math.sin(ph + s)) * .5, L * .7); };
+          ctx.strokeStyle = '#6F7BA6'; legs(Math.PI); arms(0, hy - L * 1.15);
+          ctx.strokeStyle = '#E7E9EF'; legs(0);
+          ctx.beginPath(); ctx.moveTo(hx, hy); ctx.lineTo(hx + 3, hy - L * 1.25); ctx.stroke();
+          arms(Math.PI, hy - L * 1.15);
+          ctx.fillStyle = '#E7E9EF'; ctx.beginPath(); ctx.arc(hx + 5, hy - L * 1.25 - L * .32, L * .27, 0, TAU); ctx.fill();
+        }
+      };
+    },
+
+    pixel(stage) {
+      const { ctx, size, fit } = makeCanvas(stage);
+      const W = 80, H = 50;
+      const off = document.createElement('canvas'); off.width = W; off.height = H;
+      const o = off.getContext('2d');
+      const pal = { k: '#1B1B2F', r: '#E8505B', s: '#F9C98A', b: '#3D6BD1', w: '#FFFFFF', y: '#F6D743' };
+      const frames = [
+        ['..rrrr..', '.rrrrrr.', '..ssks..', '..ssss..', '.bbrrbb.', 's.bbbb.s', '..b..b..', '.kk..kk.'],
+        ['..rrrr..', '.rrrrrr.', '..ssks..', '..ssss..', '..brrb..', '.sbbbbs.', '...bb...', '...kk...'],
+      ];
+      const sprite = (f, x, y) => f.forEach((row, j) => [...row].forEach((c, i) => { if (c !== '.') { o.fillStyle = pal[c]; o.fillRect(x + i, y + j, 1, 1); } }));
+      const cloud = (x, y) => { o.fillStyle = '#FFFFFF'; o.fillRect(x + 2, y, 6, 2); o.fillRect(x, y + 2, 11, 2); o.fillStyle = '#D7E4FF'; o.fillRect(x + 1, y + 4, 9, 1); };
+      return {
+        resize: fit,
+        frame(t) {
+          const bands = ['#5B8DEF', '#6A9BF2', '#7CA9F4', '#90B8F6', '#A6C7F8'];
+          bands.forEach((c, i) => { o.fillStyle = c; o.fillRect(0, i * 7, W, 7); });
+          o.fillStyle = '#A6C7F8'; o.fillRect(0, 35, W, 15);
+          o.fillStyle = '#F6D743'; o.fillRect(62, 5, 7, 7); o.fillStyle = '#FFF1A8'; o.fillRect(63, 6, 2, 2);
+          [[0, 6], [34, 12], [60, 3]].forEach(([x, y]) => cloud(Math.round(((x - t * 4) % 100 + 100) % 100) - 12, y));
+          const hills = Math.floor(t * 8);
+          o.fillStyle = '#3E9E5A';
+          for (let x = 0; x < W; x++) { const hh = 4 + Math.round(3 * Math.sin((x + hills * .5) * .12)); o.fillRect(x, 38 - hh, 1, hh); }
+          const scroll = Math.floor(t * 20) % 8;
+          for (let x = -scroll; x < W; x += 8) {
+            o.fillStyle = '#C9763B'; o.fillRect(x, 38, 8, 12);
+            o.fillStyle = '#E8995A'; o.fillRect(x, 38, 8, 1); o.fillRect(x, 38, 1, 12);
+            o.fillStyle = '#8A4B22'; o.fillRect(x + 7, 39, 1, 11); o.fillRect(x, 44, 8, 1);
+          }
+          o.fillStyle = '#3FBF5F'; o.fillRect(0, 37, W, 1);
+          const bx = Math.round(((52 - t * 20) % 96 + 96) % 96) - 8;
+          o.fillStyle = '#D98E1E'; o.fillRect(bx, 18, 7, 7); o.fillStyle = '#F6D743'; o.fillRect(bx + 1, 19, 5, 5);
+          o.fillStyle = '#8A5A10'; o.fillRect(bx + 3, 20, 1, 2); o.fillRect(bx + 3, 23, 1, 1);
+          const cyc = t % 2.2, jump = cyc < .6 ? Math.sin(cyc / .6 * Math.PI) * 11 : 0;
+          const f = jump > 0 ? frames[0] : frames[Math.floor(t * 8) % 2];
+          sprite(f, 18, 29 - Math.round(jump));
+          ctx.imageSmoothingEnabled = false;
+          const sc = Math.max(size.w / W, size.h / H);
+          ctx.fillStyle = '#000'; ctx.fillRect(0, 0, size.w, size.h);
+          ctx.drawImage(off, (size.w - W * sc) / 2, (size.h - H * sc) / 2, W * sc, H * sc);
+        }
+      };
+    },
+
+    kinetic(stage) {
+      const el = stage.querySelector('.kword'), count = stage.querySelector('.kcount');
+      const words = [
+        { t: 'ことばが', bg: '#F2B56B', fg: '#1B1410', mode: 'slide' },
+        { t: '落ちて', bg: '#1E2A4A', fg: '#9FE3D8', mode: 'drop' },
+        { t: 'まわって', bg: '#E88FB4', fg: '#2A0F1C', mode: 'spin' },
+        { t: '大きく', bg: '#0F1117', fg: '#F2B56B', mode: 'zoom' },
+        { t: '動く！', bg: '#9FE3D8', fg: '#0E2A28', mode: 'shake' },
+      ];
+      const dur = 1.5, ease = x => 1 - Math.pow(1 - x, 3);
+      const bounce = x => { const n = 7.5625, d = 2.75; if (x < 1 / d) return n * x * x; if (x < 2 / d) return n * (x -= 1.5 / d) * x + .75; if (x < 2.5 / d) return n * (x -= 2.25 / d) * x + .9375; return n * (x -= 2.625 / d) * x + .984375; };
+      let cur = -1;
+      return {
+        frame(t) {
+          const i = Math.floor(t / dur) % words.length, p = (t % dur) / dur, wd = words[i];
+          if (i !== cur) { cur = i; el.textContent = wd.t; stage.style.backgroundColor = wd.bg; el.style.color = wd.fg; count.style.color = wd.fg; count.textContent = `${i + 1} / ${words.length}`; }
+          const inP = Math.min(1, p / .4), out = p > .85 ? (p - .85) / .15 : 0;
+          let tf = '';
+          if (wd.mode === 'slide') tf = `translateX(${(1 - ease(inP)) * -140}%) skewX(${(1 - ease(inP)) * 20}deg)`;
+          if (wd.mode === 'drop') tf = `translateY(${(1 - bounce(inP)) * -160}%)`;
+          if (wd.mode === 'spin') tf = `rotate(${(1 - ease(inP)) * -360}deg) scale(${.3 + .7 * ease(inP)})`;
+          if (wd.mode === 'zoom') tf = `scale(${.2 + 1.1 * ease(inP) - (inP === 1 ? .1 * Math.min(1, (p - .4) / .2) : 0)})`;
+          if (wd.mode === 'shake') tf = `translateX(${Math.sin(p * 60) * 8 * (1 - inP)}px) scale(${.6 + .4 * ease(inP)})`;
+          el.style.transform = tf + (out ? ` translateY(${out * 40}%)` : '');
+          el.style.opacity = String(Math.min(1, inP * 3) * (1 - out));
+        }
+      };
+    },
+
+    parallax(stage) {
+      const { ctx, size, fit } = makeCanvas(stage);
+      const stars = Array.from({ length: 60 }, () => [Math.random(), Math.random() * .5, Math.random()]);
+      const layers = [
+        { c: '#3B2F5C', sp: 6, amp: .16, base: .52, f: .006 },
+        { c: '#2C2349', sp: 14, amp: .13, base: .64, f: .01 },
+        { c: '#1D1834', sp: 28, amp: .11, base: .76, f: .016 },
+        { c: '#110E20', sp: 55, amp: .08, base: .88, f: .024 },
+      ];
+      return {
+        resize: fit,
+        frame(t) {
+          const { w, h } = size;
+          const g = ctx.createLinearGradient(0, 0, 0, h);
+          g.addColorStop(0, '#1A1238'); g.addColorStop(.55, '#7A3E6E'); g.addColorStop(1, '#F29A6B');
+          ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
+          stars.forEach(([x, y, a]) => { ctx.fillStyle = `rgba(255,255,255,${.3 + .5 * Math.abs(Math.sin(t * 1.5 + a * 10))})`; ctx.fillRect(x * w, y * h, 1.5, 1.5); });
+          ctx.fillStyle = '#FFD6A0'; ctx.beginPath(); ctx.arc(w * .7, h * .5, h * .12, 0, TAU); ctx.fill();
+          layers.forEach(L => {
+            ctx.fillStyle = L.c; ctx.beginPath(); ctx.moveTo(0, h);
+            for (let x = 0; x <= w + 4; x += 4) {
+              const X = x + t * L.sp;
+              const y = h * L.base - h * L.amp * (.6 * Math.sin(X * L.f) + .3 * Math.sin(X * L.f * 2.3 + 1) + .1 * Math.sin(X * L.f * 5.1));
+              ctx.lineTo(x, y);
+            }
+            ctx.lineTo(w, h); ctx.fill();
+          });
+        }
+      };
+    },
+
+    ascii(stage) {
+      const pre = stage.querySelector('pre');
+      const cols = 64, rows = 30, chars = '.,-~:;=!*#$@';
+      function fitFont() { const r = stage.getBoundingClientRect(); const fs = Math.min(r.width / (cols * .62), r.height / rows) * .95; pre.style.fontSize = fs + 'px'; }
+      fitFont();
+      return {
+        resize: fitFont,
+        frame(t) {
+          const A = t * .9, B = t * .45;
+          const out = new Array(cols * rows).fill(' '), zb = new Float32Array(cols * rows);
+          const cA = Math.cos(A), sA = Math.sin(A), cB = Math.cos(B), sB = Math.sin(B);
+          for (let th = 0; th < TAU; th += .07) {
+            const ct = Math.cos(th), st = Math.sin(th);
+            for (let ph = 0; ph < TAU; ph += .02) {
+              const cp = Math.cos(ph), sp = Math.sin(ph);
+              const cx = 2 + ct, cy = st;
+              const x = cx * (cB * cp + sA * sB * sp) - cy * cA * sB;
+              const y = cx * (sB * cp - sA * cB * sp) + cy * cA * cB;
+              const z = 5 + cA * cx * sp + cy * sA, ooz = 1 / z;
+              const xp = Math.floor(cols / 2 + 38 * ooz * x), yp = Math.floor(rows / 2 - 19 * ooz * y);
+              const Lm = cp * ct * sB - cA * ct * sp - sA * st + cB * (cA * st - ct * sA * sp);
+              if (xp >= 0 && xp < cols && yp >= 0 && yp < rows && Lm > 0) {
+                const k = xp + yp * cols;
+                if (ooz > zb[k]) { zb[k] = ooz; out[k] = chars[Math.min(11, Math.floor(Lm * 8))]; }
+              }
+            }
+          }
+          let s = '';
+          for (let j = 0; j < rows; j++) s += out.slice(j * cols, j * cols + cols).join('') + '\n';
+          pre.textContent = s;
+        }
+      };
+    },
+
+    rain(stage) {
+      const { ctx, size, fit } = makeCanvas(stage);
+      let drops = [], splashes = [];
+      function seed() { drops = Array.from({ length: 170 }, () => ({ x: rand(-40, size.w), y: rand(-size.h, size.h), v: rand(7, 12), l: rand(10, 20) })); }
+      seed();
+      let flashAt = 1.6;
+      return {
+        resize() { fit(); seed(); },
+        frame(t) {
+          const { w, h } = size, gy = h * .86;
+          let flash = 0;
+          if (t > flashAt + 6) flashAt = t;
+          const ft = t - flashAt;
+          if (ft >= 0 && ft < .5) flash = (ft < .08 || (ft > .18 && ft < .28)) ? 1 : .25 * (1 - ft / .5);
+          const g = ctx.createLinearGradient(0, 0, 0, h);
+          g.addColorStop(0, '#0B1322'); g.addColorStop(1, '#1A2536');
+          ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
+          if (flash) { ctx.fillStyle = `rgba(200,215,255,${flash * .55})`; ctx.fillRect(0, 0, w, h); }
+          if (ft >= 0 && ft < .3) {
+            ctx.strokeStyle = 'rgba(235,240,255,.95)'; ctx.lineWidth = 2; ctx.beginPath();
+            let x = w * .3, y = 0; ctx.moveTo(x, y);
+            let s = 7; const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+            while (y < gy * .8) { x += (rnd() - .5) * 34; y += 10 + rnd() * 16; ctx.lineTo(x, y); }
+            ctx.stroke();
+          }
+          ctx.fillStyle = '#0A0F18'; ctx.fillRect(0, gy, w, h - gy);
+          ctx.strokeStyle = 'rgba(170,200,240,.55)'; ctx.lineWidth = 1.2;
+          for (const d of drops) {
+            ctx.beginPath(); ctx.moveTo(d.x, d.y); ctx.lineTo(d.x - d.l * .25, d.y + d.l); ctx.stroke();
+            d.y += d.v; d.x -= d.v * .25;
+            if (d.y > gy) { splashes.push({ x: d.x, y: gy + rand(0, h - gy - 2), r: 0 }); d.y = rand(-60, 0); d.x = rand(0, w + 40); }
+          }
+          ctx.lineWidth = 1;
+          splashes = splashes.filter(s => (s.r += .6) < 8);
+          for (const s of splashes) { ctx.strokeStyle = `rgba(170,200,240,${.6 * (1 - s.r / 8)})`; ctx.beginPath(); ctx.ellipse(s.x, s.y, s.r * 1.6, s.r * .45, 0, 0, TAU); ctx.stroke(); }
+        }
+      };
+    },
+  };
+
+  // SVG の星⇔円モーフ（点の数をそろえて補間）
+  (function morph() {
+    const poly = document.getElementById('morph');
+    const pts = (fn) => Array.from({ length: 10 }, (_, i) => { const a = -Math.PI / 2 + i * TAU / 10, r = fn(i); return [44 + r * Math.cos(a), 44 + r * Math.sin(a)]; });
+    const star = pts(i => i % 2 ? 9 : 22), round = pts(() => 17);
+    demos.push({ frame(t) {
+      const k = .5 - .5 * Math.cos(t * 1.6);
+      poly.setAttribute('points', star.map((p, i) => [p[0] + (round[i][0] - p[0]) * k, p[1] + (round[i][1] - p[1]) * k].map(v => v.toFixed(2)).join(',')).join(' '));
+      poly.setAttribute('transform', `rotate(${t * 30} 44 44)`);
+    }, always: true });
+  })();
+
+  document.querySelectorAll('[data-demo]').forEach(stage => {
+    const d = setups[stage.dataset.demo](stage);
+    d.stage = stage;
+    demos.push(d);
+  });
+
+  const visible = new Set(demos.filter(d => d.always));
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      const d = demos.find(x => x.stage === e.target);
+      if (d) e.isIntersecting ? visible.add(d) : visible.delete(d);
+    }), { rootMargin: '120px' });
+    demos.forEach(d => d.stage && io.observe(d.stage));
+  } else demos.forEach(d => visible.add(d));
+
+  let rt;
+  addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => demos.forEach(d => d.resize && d.resize()), 150); });
+
+  if (reduce) {
+    demos.forEach(d => { for (let i = 0; i < 90; i++) d.frame(2 + i / 60, 1 / 60); });
+    return;
+  }
+  const t0 = performance.now();
+  function loop(now) {
+    const t = (now - t0) / 1000;
+    visible.forEach(d => d.frame(t));
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+})();
+</script>
