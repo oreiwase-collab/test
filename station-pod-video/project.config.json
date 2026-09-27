@@ -1,0 +1,9 @@
+{
+  "projectTitle": "ナレーション解説動画",
+  "scriptFile": "inputs/script.md",
+  "audioFile": "narration.wav",
+  "captionsFile": null,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080
+}
