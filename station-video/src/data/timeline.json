@@ -1,0 +1,1336 @@
+{
+ "version": 1,
+ "projectTitle": "ステーションポッド事件の心理学",
+ "fps": 30,
+ "width": 1920,
+ "height": 1080,
+ "audioFile": "narration.wav",
+ "audioParts": [
+  {
+   "file": "narration-part1.wav",
+   "fromFrame": 0
+  },
+  {
+   "file": "narration-part2.wav",
+   "fromFrame": 3878
+  }
+ ],
+ "durationSeconds": 291.877,
+ "timingSource": "silence-aligned",
+ "scenes": [
+  {
+   "id": "scene-001",
+   "start": 0.0,
+   "duration": 6.5667,
+   "type": "illustration",
+   "headline": "",
+   "body": "たくさんの人が行き交う駅のど真ん中で、服を脱ぐなんて絶対にあり得ないと思いますよね。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "真上から見た駅コンコース。無数の点（人）が流れる中、中央の1人だけが立ち止まる。「絶対にあり得ない」の文字が浮かぶ。",
+   "styles": {
+    "背景": 3,
+    "主役": 9,
+    "文字": 12,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 1
+   },
+   "reveals": {
+    "stop": 49,
+    "text": 115
+   }
+  },
+  {
+   "id": "scene-002",
+   "start": 6.5667,
+   "duration": 8.0,
+   "type": "illustration",
+   "headline": "",
+   "body": "でも、たった畳1枚分の小さな箱に入るだけで、人間の脳は信じられない勘違いを起こしてしまいます。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "点の流れの中央に黒いキューブが出現（「畳1枚分」の寸法線を添える）。人物が入った瞬間、画面が一瞬グリッチして「勘違い」と表示。",
+   "styles": {
+    "背景": 3,
+    "主役": 5,
+    "文字": 11,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 2
+   },
+   "reveals": {
+    "box": 225,
+    "enter": 271,
+    "glitch": 362
+   }
+  },
+  {
+   "id": "scene-003",
+   "start": 14.5667,
+   "duration": 13.8667,
+   "type": "document",
+   "headline": "",
+   "body": "2026年9月、都内の大きな駅に置かれたテレワーク用の防音個室「ステーションポッド」の中で、服を脱いで外に見せびらかすような動画がネットに広まり、警察が動く大きな騒ぎになりました。",
+   "motion": "static",
+   "accent": "#D2A451",
+   "visualNotes": "暗く抑えたシェーダー背景の上に、ニュース見出し風カードと架空のSNS通知UIが積み重なる。「2026年9月」「警察が動く」を強調。",
+   "styles": {
+    "背景": 4,
+    "主役": 1,
+    "文字": 12,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 3
+   },
+   "reveals": {
+    "date": 437,
+    "photo": 544,
+    "sns": 721,
+    "police": 745
+   }
+  },
+  {
+   "id": "scene-004",
+   "start": 28.4333,
+   "duration": 4.1333,
+   "type": "illustration",
+   "headline": "",
+   "body": "おかしな人が自分勝手に暴れただけ、と片付けるのは簡単です。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "群衆が1人の人物を指さす。「おかしな人」の文字にSVGの取り消し線が引かれる。",
+   "styles": {
+    "背景": null,
+    "主役": 9,
+    "文字": 2,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 4
+   },
+   "reveals": {
+    "label": 853,
+    "strike": 923
+   }
+  },
+  {
+   "id": "scene-005",
+   "start": 32.5667,
+   "duration": 8.5,
+   "type": "illustration",
+   "headline": "",
+   "body": "だが、このとんでもない行動を引き起こしたのは、狭い箱に入ったときに誰もが持っている心のスイッチが入ってしまったからでした。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "脳の線画の中をジェネラティブなノイズが流れ、中央のスイッチがカチッと入る。「心のスイッチ」を強調。",
+   "styles": {
+    "背景": 6,
+    "主役": 8,
+    "文字": 12,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 5
+   },
+   "reveals": {
+    "box": 1052,
+    "switch": 1131
+   }
+  },
+  {
+   "id": "scene-006",
+   "start": 41.0667,
+   "duration": 7.7667,
+   "type": "quote",
+   "headline": "",
+   "body": "いったい私たちの頭と、普段暮らしている街の中で何が起きていたのか、一緒に解き明かしていきましょう。",
+   "motion": "static",
+   "accent": "#D2A451",
+   "visualNotes": "タイトルカード。「頭の中 × 街の仕組み」が一筆書きで描かれ、光が走る。",
+   "styles": {
+    "背景": 4,
+    "主役": null,
+    "文字": 2,
+    "仕上げ": 1
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 6
+   },
+   "reveals": {
+    "head": 1250,
+    "city": 1318,
+    "solve": 1364
+   }
+  },
+  {
+   "id": "scene-007",
+   "start": 48.8333,
+   "duration": 7.0,
+   "type": "illustration",
+   "headline": "",
+   "body": "なぜ人は、すぐ外を大勢の人が歩いているのに、ガラス張りの箱の中で油断してしまうのでしょうか。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "ガラス張りの3Dブースを斜め上から回り込む。外を棒人間が歩き、中の人物はくつろぐ。問いの文字が出る。",
+   "styles": {
+    "背景": null,
+    "主役": 5,
+    "文字": 12,
+    "仕上げ": 9
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 7
+   },
+   "reveals": {
+    "outside": 1510,
+    "question": 1604
+   }
+  },
+  {
+   "id": "scene-008",
+   "start": 55.8333,
+   "duration": 7.8667,
+   "type": "document",
+   "headline": "",
+   "body": "アメリカのコーネル大学のゲイリーエバンスという研究者が、2000年に300人の街の人を集めて実験を行いました。",
+   "motion": "static",
+   "accent": "#D2A451",
+   "visualNotes": "研究カード（大学・研究者名・年・人数）がスライドイン。「300人」をカウントアップ。",
+   "styles": {
+    "背景": null,
+    "主役": 1,
+    "文字": 12,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 8
+   },
+   "reveals": {
+    "name": 1716,
+    "year": 1768,
+    "count": 1813
+   }
+  },
+  {
+   "id": "scene-009",
+   "start": 63.7,
+   "duration": 9.8667,
+   "type": "illustration",
+   "headline": "",
+   "body": "広さが違う部屋に人を入れ、窓の外を他人が通り過ぎる様子を見せながら、ドキドキする度合いやストレスを測りつつ難しいパズルを解かせたのです。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "大・中・小の部屋を並べた図解。各部屋で棒人間がパズルに取り組み、横に心拍の波形が流れる。",
+   "styles": {
+    "背景": null,
+    "主役": 8,
+    "文字": null,
+    "仕上げ": 9
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 9
+   },
+   "reveals": {
+    "rooms": 1911,
+    "window": 1957,
+    "heart": 2047,
+    "puzzle": 2147
+   }
+  },
+  {
+   "id": "scene-010",
+   "start": 73.5667,
+   "duration": 7.5667,
+   "type": "data",
+   "headline": "",
+   "body": "すると、部屋が狭くなればなるほど、外から見られていることへの警戒心が約40パーセントも下がりました。",
+   "motion": "static",
+   "accent": "#D2A451",
+   "visualNotes": "部屋の広さ別の警戒心を棒グラフで表示。小部屋の棒が下がり「−40%」が大きく出る。",
+   "styles": {
+    "背景": null,
+    "主役": 7,
+    "文字": 12,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 10
+   },
+   "reveals": {
+    "bars": 2242,
+    "metric": 2340
+   }
+  },
+  {
+   "id": "scene-011",
+   "start": 81.1333,
+   "duration": 7.0333,
+   "type": "illustration",
+   "headline": "",
+   "body": "壁が体にぴったり近づく狭い部屋に入ると、人間の脳は守られていると勘違いしてしまうのです。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "暖色のシェーダー。四角い壁の線が丸く変形して人物を包む。「守られている」が表示され、ずれて「勘違い」に変わる。",
+   "styles": {
+    "背景": 4,
+    "主役": 2,
+    "文字": 11,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 11
+   },
+   "reveals": {
+    "walls": 2451,
+    "safe": 2545,
+    "glitch": 2569
+   }
+  },
+  {
+   "id": "scene-012",
+   "start": 88.1667,
+   "duration": 2.7,
+   "type": "illustration",
+   "headline": "",
+   "body": "駅の通路を思い浮かべてみてください。",
+   "motion": "drift-left",
+   "accent": "#D2A451",
+   "visualNotes": "駅の通路の奥行き（柱・人の層）を多層パララックスで表現。手前ほど速く人が流れる。",
+   "styles": {
+    "背景": 13,
+    "主役": 9,
+    "文字": null,
+    "仕上げ": 3
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 12
+   },
+   "reveals": {}
+  },
+  {
+   "id": "scene-013",
+   "start": 90.8667,
+   "duration": 9.2,
+   "type": "illustration",
+   "headline": "",
+   "body": "大勢の人の足音が響き、人と人が肩をぶつけそうになりながら歩いているすぐ横に、黒くて四角い電話ボックスのような箱がポツンと立っています。",
+   "motion": "drift-left",
+   "accent": "#D2A451",
+   "visualNotes": "カメラが人の流れを抜けると、通路脇に黒いキューブがポツンと立っている。",
+   "styles": {
+    "背景": 13,
+    "主役": 5,
+    "文字": null,
+    "仕上げ": 3
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 13
+   },
+   "reveals": {
+    "booth": 2872
+   }
+  },
+  {
+   "id": "scene-014",
+   "start": 100.0667,
+   "duration": 8.9333,
+   "type": "illustration",
+   "headline": "",
+   "body": "重いドアをパタンと閉めた瞬間、さっきまでのうるさい音が遠くのうなり声のように消えて、目の前には自分だけの机と椅子だけが残ります。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "ドアが閉まると背景の群衆がぼけて暗くなる。画面端の音量メーター（見本01のイコライザー）が小さくなる。",
+   "styles": {
+    "背景": 13,
+    "主役": 9,
+    "文字": null,
+    "仕上げ": 1
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 14
+   },
+   "reveals": {
+    "door": 3010,
+    "quiet": 3078,
+    "desk": 3182
+   }
+  },
+  {
+   "id": "scene-015",
+   "start": 109.0,
+   "duration": 12.1,
+   "type": "illustration",
+   "headline": "",
+   "body": "ガラスのすぐ向こう側をスーツ姿の大人が早歩きで通り過ぎているのに、壁に囲まれている安心感のせいで、外の世界がまるでテレビ画面の中の出来事のように遠く感じてしまうのです。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "ブース内の人物の肩越しの視点。ガラスの外の通勤客に走査線と軽いグリッチがかかり、テレビ画面のように見える。",
+   "styles": {
+    "背景": null,
+    "主役": 9,
+    "文字": null,
+    "仕上げ": 11
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 15
+   },
+   "reveals": {
+    "suit": 3312,
+    "safe": 3437,
+    "tv": 3506
+   }
+  },
+  {
+   "id": "scene-016",
+   "start": 121.1,
+   "duration": 8.7333,
+   "type": "illustration",
+   "headline": "",
+   "body": "ここまでは個人の心の内側の話です。では、社会全体の仕組みからこの景色を眺めると、何が見えてくるでしょうか。",
+   "motion": "static",
+   "accent": "#D2A451",
+   "visualNotes": "キューブからカメラが引いていき、駅全体、さらに街全体へ。「心の中 → 街の仕組み」の文字。",
+   "styles": {
+    "背景": null,
+    "主役": 5,
+    "文字": 12,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 16
+   },
+   "reveals": {
+    "pull": 3740
+   }
+  },
+  {
+   "id": "scene-017",
+   "start": 129.8333,
+   "duration": 7.5333,
+   "type": "illustration",
+   "headline": "",
+   "body": "この問題は、1人の勘違いだけでなく、街の作りそのものが変わってしまったことが原因でもあります。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "街のシルエットがパララックスで流れ、その上にジェネラティブな歪みが広がる。",
+   "styles": {
+    "背景": 13,
+    "主役": 6,
+    "文字": 12,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 17
+   },
+   "reveals": {
+    "city": 3975
+   }
+  },
+  {
+   "id": "scene-018",
+   "start": 137.3667,
+   "duration": 8.9,
+   "type": "document",
+   "headline": "",
+   "body": "都市について研究していたエドワードソジャという学者が、1996年にロサンゼルスの街で調査を行いました。",
+   "motion": "static",
+   "accent": "#D2A451",
+   "visualNotes": "研究カード（研究者名・年・地域）がスライドイン。",
+   "styles": {
+    "背景": null,
+    "主役": 1,
+    "文字": 12,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 18
+   },
+   "reveals": {
+    "name": 4170,
+    "year": 4221,
+    "place": 4283
+   }
+  },
+  {
+   "id": "scene-019",
+   "start": 146.2667,
+   "duration": 11.3,
+   "type": "illustration",
+   "headline": "",
+   "body": "誰もが自由に使えた広場をフェンスで囲み、お金を払った人だけが入れる小さなブースに区切った場所で、半年間にわたって人々の様子を観察したのです。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "広場の俯瞰図にフェンスの線が一筆書きで引かれ、格子状のブースに区切られる。中を棒人間が動く。",
+   "styles": {
+    "背景": null,
+    "主役": 8,
+    "文字": null,
+    "仕上げ": 2
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 19
+   },
+   "reveals": {
+    "fence": 4443,
+    "booths": 4536,
+    "months": 4593
+   }
+  },
+  {
+   "id": "scene-020",
+   "start": 157.5667,
+   "duration": 9.7667,
+   "type": "data",
+   "headline": "",
+   "body": "防犯カメラをたくさん増やしたにもかかわらず、ブースの中でルールを破るいたずらや迷惑行為は、もとの広場の約3倍に増えてしまいました。",
+   "motion": "static",
+   "accent": "#D2A451",
+   "visualNotes": "防犯カメラのアイコンが次々に増える。横で「もとの広場」と「ブースの中」の棒グラフを比べ「約3倍」を表示。",
+   "styles": {
+    "背景": null,
+    "主役": 7,
+    "文字": 12,
+    "仕上げ": 1
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 20
+   },
+   "reveals": {
+    "cameras": 4727,
+    "bars": 4908,
+    "metric": 4942
+   }
+  },
+  {
+   "id": "scene-021",
+   "start": 167.3333,
+   "duration": 7.3,
+   "type": "illustration",
+   "headline": "",
+   "body": "広場を細かく区切って個室にしてしまうと、お互いに見守り合う自然なブレーキが壊れてしまうのです。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "人々のあいだを視線の線が網のように結ぶ。ブースの壁が立つと線が1本ずつ切れて消える。",
+   "styles": {
+    "背景": null,
+    "主役": 8,
+    "文字": 12,
+    "仕上げ": 2
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 21
+   },
+   "reveals": {
+    "walls": 5045,
+    "label": 5123,
+    "cut": 5176
+   }
+  },
+  {
+   "id": "scene-022",
+   "start": 174.6333,
+   "duration": 6.8,
+   "type": "illustration",
+   "headline": "",
+   "body": "昔の駅のベンチや待合室は、みんなで机や椅子を分け合い、お互いの目がある場所でした。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "セピア寄りの色調のパララックス。ベンチに座る人々のあいだを視線の線が行き交う。",
+   "styles": {
+    "背景": 13,
+    "主役": 9,
+    "文字": null,
+    "仕上げ": 2
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 22
+   },
+   "reveals": {
+    "gaze": 5366
+   }
+  },
+  {
+   "id": "scene-023",
+   "start": 181.4333,
+   "duration": 10.2,
+   "type": "illustration",
+   "headline": "",
+   "body": "ところが、便利さとプライバシーをどんどん進めた結果、街の共有スペースの中に「お金を払ってひとりぼっちになれるカプセル」が置かれるようになりました。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "床から黒いキューブが次々にせり上がる。各キューブに料金タグ（¥）が付く。",
+   "styles": {
+    "背景": null,
+    "主役": 5,
+    "文字": 12,
+    "仕上げ": 1
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 23
+   },
+   "reveals": {
+    "rise": 5545,
+    "yen": 5604
+   }
+  },
+  {
+   "id": "scene-024",
+   "start": 191.6333,
+   "duration": 10.1,
+   "type": "illustration",
+   "headline": "",
+   "body": "みんなで使う場所のマナーと、自分の部屋のような自由さが狭いカプセルの中でぶつかり合って、大きな隙間が駅のホームに生まれてしまったのです。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "「みんなのマナー」と「自分の部屋の自由」の領域がぶつかる図解。境界線がグリッチして裂け、隙間が開く。",
+   "styles": {
+    "背景": 4,
+    "主役": 8,
+    "文字": 11,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 24
+   },
+   "reveals": {
+    "manner": 5749,
+    "free": 5796,
+    "crack": 5923
+   }
+  },
+  {
+   "id": "scene-025",
+   "start": 201.7333,
+   "duration": 11.6333,
+   "type": "quote",
+   "headline": "",
+   "body": "便利さを追い求めた仕組みが、皮肉にもみんなのモラルを麻痺させてしまったことは分かりました。では、そもそもなぜ私たちはそんな個室を必要としたのでしょうか。",
+   "motion": "static",
+   "accent": "#D2A451",
+   "visualNotes": "文字だけの転換カット。問いの文字が1語ずつ出る。",
+   "styles": {
+    "背景": null,
+    "主役": null,
+    "文字": 12,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 25
+   },
+   "reveals": {
+    "q2": 6241
+   }
+  },
+  {
+   "id": "scene-026",
+   "start": 213.3667,
+   "duration": 10.6333,
+   "type": "illustration",
+   "headline": "",
+   "body": "駅の小部屋で起きた事件は、ただの恥知らずな悪ふざけではなく、24時間スマホで誰かと繋がり続ける疲れから逃げ出そうとしたSOSでもありました。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "パーティクルの接続線（見本03）が人物に絡みつく。「SOS」の文字が点滅する。",
+   "styles": {
+    "背景": 3,
+    "主役": 9,
+    "文字": 12,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 26
+   },
+   "reveals": {
+    "hours": 6518,
+    "sos": 6660
+   }
+  },
+  {
+   "id": "scene-027",
+   "start": 224.0,
+   "duration": 6.5,
+   "type": "document",
+   "headline": "",
+   "body": "学者のシェリータークルが、2011年に働く大人200人を追いかけた調査があります。",
+   "motion": "static",
+   "accent": "#D2A451",
+   "visualNotes": "研究カード（研究者名・年・人数）。「200人」をカウントアップ。",
+   "styles": {
+    "背景": null,
+    "主役": 1,
+    "文字": 12,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 27
+   },
+   "reveals": {
+    "name": 6734,
+    "year": 6762,
+    "count": 6825
+   }
+  },
+  {
+   "id": "scene-028",
+   "start": 230.5,
+   "duration": 10.4667,
+   "type": "illustration",
+   "headline": "",
+   "body": "仕事の連絡をスマホでずっと受け続けなければいけない人たちを、1日1時間だけ通信を止めた閉まり切った部屋に入れて、どんな気持ちになるかを調べました。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "スマホの通知バッジが増え続ける人物。部屋に入ると通知が止まり、1時間タイマーが動き出す。",
+   "styles": {
+    "背景": null,
+    "主役": 9,
+    "文字": null,
+    "仕上げ": 1
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 28
+   },
+   "reveals": {
+    "notify": 6915,
+    "room": 7022,
+    "feel": 7142
+   }
+  },
+  {
+   "id": "scene-029",
+   "start": 240.9667,
+   "duration": 12.4,
+   "type": "data",
+   "headline": "",
+   "body": "すると約70パーセントの人が、社会のルールを守ることよりも、誰にも邪魔されないすっきりした解放感を優先し、普段ならしないような衝動的な行動を強く望みました。",
+   "motion": "static",
+   "accent": "#D2A451",
+   "visualNotes": "円グラフが70%まで伸び、「ルール < 解放感」を天秤の図で添える。",
+   "styles": {
+    "背景": null,
+    "主役": 7,
+    "文字": 12,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 29
+   },
+   "reveals": {
+    "metric": 7241,
+    "balance": 7426
+   }
+  },
+  {
+   "id": "scene-030",
+   "start": 253.3667,
+   "duration": 8.1667,
+   "type": "illustration",
+   "headline": "",
+   "body": "繋がり続ける息苦しさから逃げ込める隠れ家を見つけたとき、人はマナーのブレーキまで一緒に外してしまうのです。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "人物に絡んだ接続線が1本ずつ切れていき、同時に「ブレーキ」のアイコンも外れて落ちる。",
+   "styles": {
+    "背景": 3,
+    "主役": 9,
+    "文字": null,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 30
+   },
+   "reveals": {
+    "snap": 7648,
+    "brake": 7745
+   }
+  },
+  {
+   "id": "scene-031",
+   "start": 261.5333,
+   "duration": 9.5667,
+   "type": "illustration",
+   "headline": "",
+   "body": "あの駅の箱は、周りの目や連絡の通知に疲れ果てた私たちが、人混みの中でひとりきりになるために作った現代の隠れ家でした。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "夜の雨が降る街（パララックス）。雨の中でキューブだけが暖かく灯る。",
+   "styles": {
+    "背景": 15,
+    "主役": 5,
+    "文字": null,
+    "仕上げ": 13
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 31
+   },
+   "reveals": {
+    "glow": 8067
+   }
+  },
+  {
+   "id": "scene-032",
+   "start": 271.1,
+   "duration": 7.4667,
+   "type": "illustration",
+   "headline": "",
+   "body": "あなたは、あの狭い箱に1人で入ったとき、絶対に自分をコントロールできると言い切れますか。",
+   "motion": "slow-push",
+   "accent": "#D2A451",
+   "visualNotes": "キューブの中の人物にカメラがゆっくり寄る。問いの文字が出て、最後に一瞬だけグリッチ。",
+   "styles": {
+    "背景": null,
+    "主役": 9,
+    "文字": 12,
+    "仕上げ": 11
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 32
+   },
+   "reveals": {
+    "question": 8281
+   }
+  },
+  {
+   "id": "scene-033",
+   "start": 278.5667,
+   "duration": 1.9667,
+   "type": "quote",
+   "headline": "",
+   "body": "社会を科学する。",
+   "motion": "static",
+   "accent": "#D2A451",
+   "visualNotes": "チャンネルのキャッチコピーを線画で描く。背景のシェーダーを落ち着いた色にする。",
+   "styles": {
+    "背景": 4,
+    "主役": null,
+    "文字": 2,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 33
+   },
+   "reveals": {}
+  },
+  {
+   "id": "scene-034",
+   "start": 280.5333,
+   "duration": 6.7333,
+   "type": "illustration",
+   "headline": "",
+   "body": "もしあなたが駅のあの個室に入ったら、どんな気分になるか、ぜひコメント欄で教えてください。",
+   "motion": "static",
+   "accent": "#D2A451",
+   "visualNotes": "コメント入力欄風のUIに問いの文字が入力されていく。",
+   "styles": {
+    "背景": null,
+    "主役": 1,
+    "文字": 12,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 34
+   },
+   "reveals": {
+    "comment": 8549
+   }
+  },
+  {
+   "id": "scene-035",
+   "start": 287.2667,
+   "duration": 4.6103,
+   "type": "illustration",
+   "headline": "",
+   "body": "次回もニュースを一緒に深く分析したい方は、チャンネル登録をお願いします。",
+   "motion": "static",
+   "accent": "#D2A451",
+   "visualNotes": "登録ボタン（見本01の弾むボタン）が光る。",
+   "styles": {
+    "背景": null,
+    "主役": 1,
+    "文字": null,
+    "仕上げ": null
+   },
+   "visual": {
+    "kind": "remotion",
+    "motif": "station",
+    "variant": 35
+   },
+   "reveals": {
+    "button": 8696
+   }
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.26,
+   "end": 2.585,
+   "text": "たくさんの人が行き交う\n駅のど真ん中で"
+  },
+  {
+   "start": 2.585,
+   "end": 6.58,
+   "text": "服を脱ぐなんて\n絶対にあり得ないと思いますよね"
+  },
+  {
+   "start": 6.58,
+   "end": 10.055,
+   "text": "でもたった畳1枚分の\n小さな箱に入るだけで"
+  },
+  {
+   "start": 10.055,
+   "end": 14.58,
+   "text": "人間の脳は信じられない\n勘違いを起こしてしまいます"
+  },
+  {
+   "start": 14.58,
+   "end": 18.146,
+   "text": "2026年9月\n都内の大きな駅に置かれた"
+  },
+  {
+   "start": 18.146,
+   "end": 21.29,
+   "text": "テレワーク用の防音個室\n「ステーションポッド」の中で"
+  },
+  {
+   "start": 21.29,
+   "end": 24.82,
+   "text": "服を脱いで外に見せびらかすような\n動画がネットに広まり"
+  },
+  {
+   "start": 24.82,
+   "end": 27.73,
+   "text": "警察が動く\n大きな騒ぎになりました"
+  },
+  {
+   "start": 28.44,
+   "end": 32.56,
+   "text": "おかしな人が自分勝手に暴れただけ\nと片付けるのは簡単です"
+  },
+  {
+   "start": 32.56,
+   "end": 35.065,
+   "text": "だがこのとんでもない行動を\n引き起こしたのは"
+  },
+  {
+   "start": 35.065,
+   "end": 38.558,
+   "text": "狭い箱に入ったときに\n誰もが持っている心のスイッチが"
+  },
+  {
+   "start": 38.558,
+   "end": 40.31,
+   "text": "入ってしまったからでした"
+  },
+  {
+   "start": 41.05,
+   "end": 44.468,
+   "text": "いったい私たちの頭と\n普段暮らしている街の中で"
+  },
+  {
+   "start": 44.468,
+   "end": 47.57,
+   "text": "何が起きていたのか\n一緒に解き明かしていきましょう"
+  },
+  {
+   "start": 48.82,
+   "end": 51.995,
+   "text": "なぜ人はすぐ外を\n大勢の人が歩いているのに"
+  },
+  {
+   "start": 51.995,
+   "end": 55.17,
+   "text": "ガラス張りの箱の中で\n油断してしまうのでしょうか"
+  },
+  {
+   "start": 55.84,
+   "end": 58.95,
+   "text": "アメリカのコーネル大学の\nゲイリーエバンスという研究者が"
+  },
+  {
+   "start": 58.95,
+   "end": 63.7,
+   "text": "2000年に300人の街の人を\n集めて実験を行いました"
+  },
+  {
+   "start": 63.7,
+   "end": 68.24,
+   "text": "広さが違う部屋に人を入れ\n窓の外を他人が通り過ぎる様子を見せながら"
+  },
+  {
+   "start": 68.24,
+   "end": 73.56,
+   "text": "ドキドキする度合いやストレスを\n測りつつ難しいパズルを解かせたのです"
+  },
+  {
+   "start": 73.56,
+   "end": 75.69,
+   "text": "すると部屋が\n狭くなればなるほど"
+  },
+  {
+   "start": 75.69,
+   "end": 80.31,
+   "text": "外から見られていることへの警戒心が\n約40パーセントも下がりました"
+  },
+  {
+   "start": 81.12,
+   "end": 83.76,
+   "text": "壁が体にぴったり近づく\n狭い部屋に入ると"
+  },
+  {
+   "start": 83.76,
+   "end": 87.31,
+   "text": "人間の脳は守られていると\n勘違いしてしまうのです"
+  },
+  {
+   "start": 88.18,
+   "end": 90.86,
+   "text": "駅の通路を\n思い浮かべてみてください"
+  },
+  {
+   "start": 90.86,
+   "end": 94.666,
+   "text": "大勢の人の足音が響き\n人と人が肩をぶつけそうになりながら"
+  },
+  {
+   "start": 94.666,
+   "end": 98.129,
+   "text": "歩いているすぐ横に\n黒くて四角い電話ボックスのような"
+  },
+  {
+   "start": 98.129,
+   "end": 100.05,
+   "text": "箱がポツンと立っています"
+  },
+  {
+   "start": 100.05,
+   "end": 103.337,
+   "text": "重いドアをパタンと閉めた瞬間\nさっきまでのうるさい音が"
+  },
+  {
+   "start": 103.337,
+   "end": 108.99,
+   "text": "遠くのうなり声のように消えて\n目の前には自分だけの机と椅子だけが残ります"
+  },
+  {
+   "start": 108.99,
+   "end": 113.305,
+   "text": "ガラスのすぐ向こう側を\nスーツ姿の大人が早歩きで通り過ぎているのに"
+  },
+  {
+   "start": 113.305,
+   "end": 116.87,
+   "text": "壁に囲まれている安心感のせいで\n外の世界がまるで"
+  },
+  {
+   "start": 116.87,
+   "end": 121.1,
+   "text": "テレビ画面の中の出来事のように\n遠く感じてしまうのです"
+  },
+  {
+   "start": 121.1,
+   "end": 124.3,
+   "text": "ここまでは\n個人の心の内側の話です"
+  },
+  {
+   "start": 124.3,
+   "end": 127.47,
+   "text": "では社会全体の仕組みから\nこの景色を眺めると"
+  },
+  {
+   "start": 127.47,
+   "end": 129.837,
+   "text": "何が見えてくるでしょうか"
+  },
+  {
+   "start": 129.837,
+   "end": 132.502,
+   "text": "この問題は\n1人の勘違いだけでなく"
+  },
+  {
+   "start": 132.502,
+   "end": 137.357,
+   "text": "街の作りそのものが変わってしまったことが\n原因でもあります"
+  },
+  {
+   "start": 137.357,
+   "end": 140.687,
+   "text": "都市について研究していた\nエドワードソジャという学者が"
+  },
+  {
+   "start": 140.687,
+   "end": 146.257,
+   "text": "1996年にロサンゼルスの街で\n調査を行いました"
+  },
+  {
+   "start": 146.257,
+   "end": 148.967,
+   "text": "誰もが自由に使えた広場を\nフェンスで囲み"
+  },
+  {
+   "start": 148.967,
+   "end": 153.112,
+   "text": "お金を払った人だけが入れる\n小さなブースに区切った場所で"
+  },
+  {
+   "start": 153.112,
+   "end": 157.577,
+   "text": "半年間にわたって\n人々の様子を観察したのです"
+  },
+  {
+   "start": 157.577,
+   "end": 159.937,
+   "text": "防犯カメラをたくさん\n増やしたにもかかわらず"
+  },
+  {
+   "start": 159.937,
+   "end": 163.592,
+   "text": "ブースの中でルールを破る\nいたずらや迷惑行為は"
+  },
+  {
+   "start": 163.592,
+   "end": 167.317,
+   "text": "もとの広場の約3倍に\n増えてしまいました"
+  },
+  {
+   "start": 167.317,
+   "end": 169.822,
+   "text": "広場を細かく区切って\n個室にしてしまうと"
+  },
+  {
+   "start": 169.822,
+   "end": 173.917,
+   "text": "お互いに見守り合う自然なブレーキが\n壊れてしまうのです"
+  },
+  {
+   "start": 174.647,
+   "end": 178.862,
+   "text": "昔の駅のベンチや待合室は\nみんなで机や椅子を分け合い"
+  },
+  {
+   "start": 178.862,
+   "end": 181.437,
+   "text": "お互いの目がある場所でした"
+  },
+  {
+   "start": 181.437,
+   "end": 184.832,
+   "text": "ところが便利さとプライバシーを\nどんどん進めた結果"
+  },
+  {
+   "start": 184.832,
+   "end": 186.813,
+   "text": "街の共有スペースの中に"
+  },
+  {
+   "start": 186.813,
+   "end": 191.637,
+   "text": "「お金を払ってひとりぼっちになれる\nカプセル」が置かれるようになりました"
+  },
+  {
+   "start": 191.637,
+   "end": 195.442,
+   "text": "みんなで使う場所のマナーと\n自分の部屋のような自由さが"
+  },
+  {
+   "start": 195.442,
+   "end": 197.442,
+   "text": "狭いカプセルの中で\nぶつかり合って"
+  },
+  {
+   "start": 197.442,
+   "end": 201.717,
+   "text": "大きな隙間が駅のホームに\n生まれてしまったのです"
+  },
+  {
+   "start": 201.717,
+   "end": 205.046,
+   "text": "便利さを追い求めた仕組みが\n皮肉にもみんなのモラルを"
+  },
+  {
+   "start": 205.046,
+   "end": 207.737,
+   "text": "麻痺させてしまったことは分かりました"
+  },
+  {
+   "start": 207.737,
+   "end": 212.467,
+   "text": "ではそもそもなぜ私たちは\nそんな個室を必要としたのでしょうか"
+  },
+  {
+   "start": 213.377,
+   "end": 217.272,
+   "text": "駅の小部屋で起きた事件は\nただの恥知らずな悪ふざけではなく"
+  },
+  {
+   "start": 217.272,
+   "end": 220.948,
+   "text": "24時間スマホで誰かと\n繋がり続ける疲れから"
+  },
+  {
+   "start": 220.948,
+   "end": 223.997,
+   "text": "逃げ出そうとした\nSOSでもありました"
+  },
+  {
+   "start": 223.997,
+   "end": 228.424,
+   "text": "学者のシェリータークルが\n2011年に働く大人200人を"
+  },
+  {
+   "start": 228.424,
+   "end": 230.497,
+   "text": "追いかけた調査があります"
+  },
+  {
+   "start": 230.497,
+   "end": 234.052,
+   "text": "仕事の連絡をスマホでずっと\n受け続けなければいけない人たちを"
+  },
+  {
+   "start": 234.052,
+   "end": 238.052,
+   "text": "1日1時間だけ通信を止めた\n閉まり切った部屋に入れて"
+  },
+  {
+   "start": 238.052,
+   "end": 240.977,
+   "text": "どんな気持ちになるかを調べました"
+  },
+  {
+   "start": 240.977,
+   "end": 245.342,
+   "text": "すると約70パーセントの人が\n社会のルールを守ることよりも"
+  },
+  {
+   "start": 245.342,
+   "end": 248.662,
+   "text": "誰にも邪魔されない\nすっきりした解放感を優先し"
+  },
+  {
+   "start": 248.662,
+   "end": 253.357,
+   "text": "普段ならしないような\n衝動的な行動を強く望みました"
+  },
+  {
+   "start": 253.357,
+   "end": 256.887,
+   "text": "繋がり続ける息苦しさから\n逃げ込める隠れ家を見つけたとき"
+  },
+  {
+   "start": 256.887,
+   "end": 260.877,
+   "text": "人はマナーのブレーキまで\n一緒に外してしまうのです"
+  },
+  {
+   "start": 261.547,
+   "end": 265.972,
+   "text": "あの駅の箱は\n周りの目や連絡の通知に疲れ果てた私たちが"
+  },
+  {
+   "start": 265.972,
+   "end": 271.097,
+   "text": "人混みの中でひとりきりになるために\n作った現代の隠れ家でした"
+  },
+  {
+   "start": 271.097,
+   "end": 273.707,
+   "text": "あなたはあの狭い箱に\n1人で入ったとき"
+  },
+  {
+   "start": 273.707,
+   "end": 277.277,
+   "text": "絶対に自分をコントロールできると\n言い切れますか"
+  },
+  {
+   "start": 278.567,
+   "end": 280.517,
+   "text": "社会を科学する"
+  },
+  {
+   "start": 280.517,
+   "end": 284.427,
+   "text": "もしあなたが駅のあの個室に入ったら\nどんな気分になるか"
+  },
+  {
+   "start": 284.427,
+   "end": 287.267,
+   "text": "ぜひコメント欄で教えてください"
+  },
+  {
+   "start": 287.267,
+   "end": 291.877,
+   "text": "次回もニュースを一緒に深く分析したい方は\nチャンネル登録をお願いします"
+  }
+ ]
+}

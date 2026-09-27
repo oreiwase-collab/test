@@ -1,0 +1,836 @@
+{
+ "version": 1,
+ "timingSource": "inputs/asr/narration.json",
+ "anchors": [
+  {
+   "id": "reveal-001-stop",
+   "kind": "internal-reveal",
+   "sceneId": "scene-001",
+   "label": "駅のど真ん中",
+   "audioTime": 1.632,
+   "visualFrame": 49
+  },
+  {
+   "id": "reveal-001-text",
+   "kind": "internal-reveal",
+   "sceneId": "scene-001",
+   "label": "絶対に",
+   "audioTime": 3.8409,
+   "visualFrame": 115
+  },
+  {
+   "id": "cut-002",
+   "kind": "scene-cut",
+   "sceneId": "scene-002",
+   "label": "でも、たった畳1",
+   "audioTime": 6.58
+  },
+  {
+   "id": "reveal-002-box",
+   "kind": "internal-reveal",
+   "sceneId": "scene-002",
+   "label": "畳1枚分",
+   "audioTime": 7.509,
+   "visualFrame": 225
+  },
+  {
+   "id": "reveal-002-enter",
+   "kind": "internal-reveal",
+   "sceneId": "scene-002",
+   "label": "箱に入る",
+   "audioTime": 9.0218,
+   "visualFrame": 271
+  },
+  {
+   "id": "reveal-002-glitch",
+   "kind": "internal-reveal",
+   "sceneId": "scene-002",
+   "label": "勘違い",
+   "audioTime": 12.0552,
+   "visualFrame": 362
+  },
+  {
+   "id": "reveal-003-date",
+   "kind": "internal-reveal",
+   "sceneId": "scene-003",
+   "label": "2026年9月",
+   "audioTime": 14.58,
+   "visualFrame": 437
+  },
+  {
+   "id": "cut-003",
+   "kind": "scene-cut",
+   "sceneId": "scene-003",
+   "label": "2026年9月、",
+   "audioTime": 14.58
+  },
+  {
+   "id": "reveal-003-photo",
+   "kind": "internal-reveal",
+   "sceneId": "scene-003",
+   "label": "テレワーク用",
+   "audioTime": 18.1464,
+   "visualFrame": 544
+  },
+  {
+   "id": "reveal-003-sns",
+   "kind": "internal-reveal",
+   "sceneId": "scene-003",
+   "label": "ネットに広まり",
+   "audioTime": 24.0213,
+   "visualFrame": 721
+  },
+  {
+   "id": "reveal-003-police",
+   "kind": "internal-reveal",
+   "sceneId": "scene-003",
+   "label": "警察が動く",
+   "audioTime": 24.82,
+   "visualFrame": 745
+  },
+  {
+   "id": "reveal-004-label",
+   "kind": "internal-reveal",
+   "sceneId": "scene-004",
+   "label": "おかしな人",
+   "audioTime": 28.44,
+   "visualFrame": 853
+  },
+  {
+   "id": "cut-004",
+   "kind": "scene-cut",
+   "sceneId": "scene-004",
+   "label": "おかしな人が自分",
+   "audioTime": 28.44
+  },
+  {
+   "id": "reveal-004-strike",
+   "kind": "internal-reveal",
+   "sceneId": "scene-004",
+   "label": "片付ける",
+   "audioTime": 30.7595,
+   "visualFrame": 923
+  },
+  {
+   "id": "cut-005",
+   "kind": "scene-cut",
+   "sceneId": "scene-005",
+   "label": "だが、このとんで",
+   "audioTime": 32.56
+  },
+  {
+   "id": "reveal-005-box",
+   "kind": "internal-reveal",
+   "sceneId": "scene-005",
+   "label": "狭い箱",
+   "audioTime": 35.065,
+   "visualFrame": 1052
+  },
+  {
+   "id": "reveal-005-switch",
+   "kind": "internal-reveal",
+   "sceneId": "scene-005",
+   "label": "心のスイッチ",
+   "audioTime": 37.7082,
+   "visualFrame": 1131
+  },
+  {
+   "id": "cut-006",
+   "kind": "scene-cut",
+   "sceneId": "scene-006",
+   "label": "いったい私たちの",
+   "audioTime": 41.05
+  },
+  {
+   "id": "reveal-006-head",
+   "kind": "internal-reveal",
+   "sceneId": "scene-006",
+   "label": "私たちの頭",
+   "audioTime": 41.6658,
+   "visualFrame": 1250
+  },
+  {
+   "id": "reveal-006-city",
+   "kind": "internal-reveal",
+   "sceneId": "scene-006",
+   "label": "街の中",
+   "audioTime": 43.9427,
+   "visualFrame": 1318
+  },
+  {
+   "id": "reveal-006-solve",
+   "kind": "internal-reveal",
+   "sceneId": "scene-006",
+   "label": "一緒に",
+   "audioTime": 45.48,
+   "visualFrame": 1364
+  },
+  {
+   "id": "cut-007",
+   "kind": "scene-cut",
+   "sceneId": "scene-007",
+   "label": "なぜ人は、すぐ外",
+   "audioTime": 48.82
+  },
+  {
+   "id": "reveal-007-outside",
+   "kind": "internal-reveal",
+   "sceneId": "scene-007",
+   "label": "大勢の人",
+   "audioTime": 50.3177,
+   "visualFrame": 1510
+  },
+  {
+   "id": "reveal-007-question",
+   "kind": "internal-reveal",
+   "sceneId": "scene-007",
+   "label": "油断",
+   "audioTime": 53.4534,
+   "visualFrame": 1604
+  },
+  {
+   "id": "cut-008",
+   "kind": "scene-cut",
+   "sceneId": "scene-008",
+   "label": "アメリカのコーネ",
+   "audioTime": 55.84
+  },
+  {
+   "id": "reveal-008-name",
+   "kind": "internal-reveal",
+   "sceneId": "scene-008",
+   "label": "ゲイリーエバンス",
+   "audioTime": 57.2064,
+   "visualFrame": 1716
+  },
+  {
+   "id": "reveal-008-year",
+   "kind": "internal-reveal",
+   "sceneId": "scene-008",
+   "label": "2000年",
+   "audioTime": 58.95,
+   "visualFrame": 1768
+  },
+  {
+   "id": "reveal-008-count",
+   "kind": "internal-reveal",
+   "sceneId": "scene-008",
+   "label": "300人",
+   "audioTime": 60.4309,
+   "visualFrame": 1813
+  },
+  {
+   "id": "reveal-009-rooms",
+   "kind": "internal-reveal",
+   "sceneId": "scene-009",
+   "label": "広さが違う",
+   "audioTime": 63.7,
+   "visualFrame": 1911
+  },
+  {
+   "id": "cut-009",
+   "kind": "scene-cut",
+   "sceneId": "scene-009",
+   "label": "広さが違う部屋に",
+   "audioTime": 63.7
+  },
+  {
+   "id": "reveal-009-window",
+   "kind": "internal-reveal",
+   "sceneId": "scene-009",
+   "label": "窓の外",
+   "audioTime": 65.245,
+   "visualFrame": 1957
+  },
+  {
+   "id": "reveal-009-heart",
+   "kind": "internal-reveal",
+   "sceneId": "scene-009",
+   "label": "ドキドキ",
+   "audioTime": 68.24,
+   "visualFrame": 2047
+  },
+  {
+   "id": "reveal-009-puzzle",
+   "kind": "internal-reveal",
+   "sceneId": "scene-009",
+   "label": "パズル",
+   "audioTime": 71.5579,
+   "visualFrame": 2147
+  },
+  {
+   "id": "cut-010",
+   "kind": "scene-cut",
+   "sceneId": "scene-010",
+   "label": "すると、部屋が狭",
+   "audioTime": 73.56
+  },
+  {
+   "id": "reveal-010-bars",
+   "kind": "internal-reveal",
+   "sceneId": "scene-010",
+   "label": "狭くなれば",
+   "audioTime": 74.72,
+   "visualFrame": 2242
+  },
+  {
+   "id": "reveal-010-metric",
+   "kind": "internal-reveal",
+   "sceneId": "scene-010",
+   "label": "約40パーセント",
+   "audioTime": 77.9981,
+   "visualFrame": 2340
+  },
+  {
+   "id": "cut-011",
+   "kind": "scene-cut",
+   "sceneId": "scene-011",
+   "label": "壁が体にぴったり",
+   "audioTime": 81.12
+  },
+  {
+   "id": "reveal-011-walls",
+   "kind": "internal-reveal",
+   "sceneId": "scene-011",
+   "label": "ぴったり近づく",
+   "audioTime": 81.7165,
+   "visualFrame": 2451
+  },
+  {
+   "id": "reveal-011-safe",
+   "kind": "internal-reveal",
+   "sceneId": "scene-011",
+   "label": "守られている",
+   "audioTime": 84.8355,
+   "visualFrame": 2545
+  },
+  {
+   "id": "reveal-011-glitch",
+   "kind": "internal-reveal",
+   "sceneId": "scene-011",
+   "label": "勘違い",
+   "audioTime": 85.6493,
+   "visualFrame": 2569
+  },
+  {
+   "id": "cut-012",
+   "kind": "scene-cut",
+   "sceneId": "scene-012",
+   "label": "駅の通路を思い浮",
+   "audioTime": 88.18
+  },
+  {
+   "id": "cut-013",
+   "kind": "scene-cut",
+   "sceneId": "scene-013",
+   "label": "大勢の人の足音が",
+   "audioTime": 90.86
+  },
+  {
+   "id": "reveal-013-booth",
+   "kind": "internal-reveal",
+   "sceneId": "scene-013",
+   "label": "黒くて四角い",
+   "audioTime": 95.75,
+   "visualFrame": 2872
+  },
+  {
+   "id": "cut-014",
+   "kind": "scene-cut",
+   "sceneId": "scene-014",
+   "label": "重いドアをパタン",
+   "audioTime": 100.05
+  },
+  {
+   "id": "reveal-014-door",
+   "kind": "internal-reveal",
+   "sceneId": "scene-014",
+   "label": "ドアをパタン",
+   "audioTime": 100.3184,
+   "visualFrame": 3010
+  },
+  {
+   "id": "reveal-014-quiet",
+   "kind": "internal-reveal",
+   "sceneId": "scene-014",
+   "label": "うるさい音",
+   "audioTime": 102.6081,
+   "visualFrame": 3078
+  },
+  {
+   "id": "reveal-014-desk",
+   "kind": "internal-reveal",
+   "sceneId": "scene-014",
+   "label": "自分だけの机",
+   "audioTime": 106.0572,
+   "visualFrame": 3182
+  },
+  {
+   "id": "cut-015",
+   "kind": "scene-cut",
+   "sceneId": "scene-015",
+   "label": "ガラスのすぐ向こ",
+   "audioTime": 108.99
+  },
+  {
+   "id": "reveal-015-suit",
+   "kind": "internal-reveal",
+   "sceneId": "scene-015",
+   "label": "スーツ姿",
+   "audioTime": 110.387,
+   "visualFrame": 3312
+  },
+  {
+   "id": "reveal-015-safe",
+   "kind": "internal-reveal",
+   "sceneId": "scene-015",
+   "label": "安心感",
+   "audioTime": 114.5782,
+   "visualFrame": 3437
+  },
+  {
+   "id": "reveal-015-tv",
+   "kind": "internal-reveal",
+   "sceneId": "scene-015",
+   "label": "テレビ画面",
+   "audioTime": 116.8705,
+   "visualFrame": 3506
+  },
+  {
+   "id": "cut-016",
+   "kind": "scene-cut",
+   "sceneId": "scene-016",
+   "label": "ここまでは個人の",
+   "audioTime": 121.1
+  },
+  {
+   "id": "reveal-016-pull",
+   "kind": "internal-reveal",
+   "sceneId": "scene-016",
+   "label": "社会全体",
+   "audioTime": 124.65,
+   "visualFrame": 3740
+  },
+  {
+   "id": "cut-017",
+   "kind": "scene-cut",
+   "sceneId": "scene-017",
+   "label": "この問題は、1人",
+   "audioTime": 129.8367
+  },
+  {
+   "id": "reveal-017-city",
+   "kind": "internal-reveal",
+   "sceneId": "scene-017",
+   "label": "街の作り",
+   "audioTime": 132.5017,
+   "visualFrame": 3975
+  },
+  {
+   "id": "cut-018",
+   "kind": "scene-cut",
+   "sceneId": "scene-018",
+   "label": "都市について研究",
+   "audioTime": 137.3567
+  },
+  {
+   "id": "reveal-018-name",
+   "kind": "internal-reveal",
+   "sceneId": "scene-018",
+   "label": "エドワードソジャ",
+   "audioTime": 138.9886,
+   "visualFrame": 4170
+  },
+  {
+   "id": "reveal-018-year",
+   "kind": "internal-reveal",
+   "sceneId": "scene-018",
+   "label": "1996年",
+   "audioTime": 140.6867,
+   "visualFrame": 4221
+  },
+  {
+   "id": "reveal-018-place",
+   "kind": "internal-reveal",
+   "sceneId": "scene-018",
+   "label": "ロサンゼルス",
+   "audioTime": 142.7643,
+   "visualFrame": 4283
+  },
+  {
+   "id": "cut-019",
+   "kind": "scene-cut",
+   "sceneId": "scene-019",
+   "label": "誰もが自由に使え",
+   "audioTime": 146.2567
+  },
+  {
+   "id": "reveal-019-fence",
+   "kind": "internal-reveal",
+   "sceneId": "scene-019",
+   "label": "フェンスで囲み",
+   "audioTime": 148.0936,
+   "visualFrame": 4443
+  },
+  {
+   "id": "reveal-019-booths",
+   "kind": "internal-reveal",
+   "sceneId": "scene-019",
+   "label": "小さなブース",
+   "audioTime": 151.2014,
+   "visualFrame": 4536
+  },
+  {
+   "id": "reveal-019-months",
+   "kind": "internal-reveal",
+   "sceneId": "scene-019",
+   "label": "半年間",
+   "audioTime": 153.1117,
+   "visualFrame": 4593
+  },
+  {
+   "id": "reveal-020-cameras",
+   "kind": "internal-reveal",
+   "sceneId": "scene-020",
+   "label": "防犯カメラ",
+   "audioTime": 157.5767,
+   "visualFrame": 4727
+  },
+  {
+   "id": "cut-020",
+   "kind": "scene-cut",
+   "sceneId": "scene-020",
+   "label": "防犯カメラをたく",
+   "audioTime": 157.5767
+  },
+  {
+   "id": "reveal-020-bars",
+   "kind": "internal-reveal",
+   "sceneId": "scene-020",
+   "label": "もとの広場",
+   "audioTime": 163.5917,
+   "visualFrame": 4908
+  },
+  {
+   "id": "reveal-020-metric",
+   "kind": "internal-reveal",
+   "sceneId": "scene-020",
+   "label": "約3倍",
+   "audioTime": 164.7179,
+   "visualFrame": 4942
+  },
+  {
+   "id": "cut-021",
+   "kind": "scene-cut",
+   "sceneId": "scene-021",
+   "label": "広場を細かく区切",
+   "audioTime": 167.3167
+  },
+  {
+   "id": "reveal-021-walls",
+   "kind": "internal-reveal",
+   "sceneId": "scene-021",
+   "label": "区切って",
+   "audioTime": 168.1656,
+   "visualFrame": 5045
+  },
+  {
+   "id": "reveal-021-label",
+   "kind": "internal-reveal",
+   "sceneId": "scene-021",
+   "label": "見守り合う",
+   "audioTime": 170.7601,
+   "visualFrame": 5123
+  },
+  {
+   "id": "reveal-021-cut",
+   "kind": "internal-reveal",
+   "sceneId": "scene-021",
+   "label": "壊れて",
+   "audioTime": 172.5276,
+   "visualFrame": 5176
+  },
+  {
+   "id": "cut-022",
+   "kind": "scene-cut",
+   "sceneId": "scene-022",
+   "label": "昔の駅のベンチや",
+   "audioTime": 174.6467
+  },
+  {
+   "id": "reveal-022-gaze",
+   "kind": "internal-reveal",
+   "sceneId": "scene-022",
+   "label": "お互いの目",
+   "audioTime": 178.8617,
+   "visualFrame": 5366
+  },
+  {
+   "id": "cut-023",
+   "kind": "scene-cut",
+   "sceneId": "scene-023",
+   "label": "ところが、便利さ",
+   "audioTime": 181.4367
+  },
+  {
+   "id": "reveal-023-rise",
+   "kind": "internal-reveal",
+   "sceneId": "scene-023",
+   "label": "街の共有スペース",
+   "audioTime": 184.8317,
+   "visualFrame": 5545
+  },
+  {
+   "id": "reveal-023-yen",
+   "kind": "internal-reveal",
+   "sceneId": "scene-023",
+   "label": "お金を払って",
+   "audioTime": 186.8134,
+   "visualFrame": 5604
+  },
+  {
+   "id": "reveal-024-manner",
+   "kind": "internal-reveal",
+   "sceneId": "scene-024",
+   "label": "みんなで使う",
+   "audioTime": 191.6367,
+   "visualFrame": 5749
+  },
+  {
+   "id": "cut-024",
+   "kind": "scene-cut",
+   "sceneId": "scene-024",
+   "label": "みんなで使う場所",
+   "audioTime": 191.6367
+  },
+  {
+   "id": "reveal-024-free",
+   "kind": "internal-reveal",
+   "sceneId": "scene-024",
+   "label": "自分の部屋",
+   "audioTime": 193.2117,
+   "visualFrame": 5796
+  },
+  {
+   "id": "reveal-024-crack",
+   "kind": "internal-reveal",
+   "sceneId": "scene-024",
+   "label": "大きな隙間",
+   "audioTime": 197.4417,
+   "visualFrame": 5923
+  },
+  {
+   "id": "cut-025",
+   "kind": "scene-cut",
+   "sceneId": "scene-025",
+   "label": "便利さを追い求め",
+   "audioTime": 201.7167
+  },
+  {
+   "id": "reveal-025-q2",
+   "kind": "internal-reveal",
+   "sceneId": "scene-025",
+   "label": "そもそも",
+   "audioTime": 208.0467,
+   "visualFrame": 6241
+  },
+  {
+   "id": "cut-026",
+   "kind": "scene-cut",
+   "sceneId": "scene-026",
+   "label": "駅の小部屋で起き",
+   "audioTime": 213.3767
+  },
+  {
+   "id": "reveal-026-hours",
+   "kind": "internal-reveal",
+   "sceneId": "scene-026",
+   "label": "24時間",
+   "audioTime": 217.2717,
+   "visualFrame": 6518
+  },
+  {
+   "id": "reveal-026-sos",
+   "kind": "internal-reveal",
+   "sceneId": "scene-026",
+   "label": "SOS",
+   "audioTime": 222.0038,
+   "visualFrame": 6660
+  },
+  {
+   "id": "cut-027",
+   "kind": "scene-cut",
+   "sceneId": "scene-027",
+   "label": "学者のシェリータ",
+   "audioTime": 223.9967
+  },
+  {
+   "id": "reveal-027-name",
+   "kind": "internal-reveal",
+   "sceneId": "scene-027",
+   "label": "シェリータークル",
+   "audioTime": 224.4564,
+   "visualFrame": 6734
+  },
+  {
+   "id": "reveal-027-year",
+   "kind": "internal-reveal",
+   "sceneId": "scene-027",
+   "label": "2011年",
+   "audioTime": 225.3967,
+   "visualFrame": 6762
+  },
+  {
+   "id": "reveal-027-count",
+   "kind": "internal-reveal",
+   "sceneId": "scene-027",
+   "label": "200人",
+   "audioTime": 227.5035,
+   "visualFrame": 6825
+  },
+  {
+   "id": "reveal-028-notify",
+   "kind": "internal-reveal",
+   "sceneId": "scene-028",
+   "label": "仕事の連絡",
+   "audioTime": 230.4967,
+   "visualFrame": 6915
+  },
+  {
+   "id": "cut-028",
+   "kind": "scene-cut",
+   "sceneId": "scene-028",
+   "label": "仕事の連絡をスマ",
+   "audioTime": 230.4967
+  },
+  {
+   "id": "reveal-028-room",
+   "kind": "internal-reveal",
+   "sceneId": "scene-028",
+   "label": "1日1時間",
+   "audioTime": 234.0517,
+   "visualFrame": 7022
+  },
+  {
+   "id": "reveal-028-feel",
+   "kind": "internal-reveal",
+   "sceneId": "scene-028",
+   "label": "どんな気持ち",
+   "audioTime": 238.0517,
+   "visualFrame": 7142
+  },
+  {
+   "id": "cut-029",
+   "kind": "scene-cut",
+   "sceneId": "scene-029",
+   "label": "すると約70パー",
+   "audioTime": 240.9767
+  },
+  {
+   "id": "reveal-029-metric",
+   "kind": "internal-reveal",
+   "sceneId": "scene-029",
+   "label": "約70パーセント",
+   "audioTime": 241.3541,
+   "visualFrame": 7241
+  },
+  {
+   "id": "reveal-029-balance",
+   "kind": "internal-reveal",
+   "sceneId": "scene-029",
+   "label": "解放感",
+   "audioTime": 247.5451,
+   "visualFrame": 7426
+  },
+  {
+   "id": "cut-030",
+   "kind": "scene-cut",
+   "sceneId": "scene-030",
+   "label": "繋がり続ける息苦",
+   "audioTime": 253.3567
+  },
+  {
+   "id": "reveal-030-snap",
+   "kind": "internal-reveal",
+   "sceneId": "scene-030",
+   "label": "逃げ込める",
+   "audioTime": 254.9256,
+   "visualFrame": 7648
+  },
+  {
+   "id": "reveal-030-brake",
+   "kind": "internal-reveal",
+   "sceneId": "scene-030",
+   "label": "ブレーキ",
+   "audioTime": 258.1829,
+   "visualFrame": 7745
+  },
+  {
+   "id": "cut-031",
+   "kind": "scene-cut",
+   "sceneId": "scene-031",
+   "label": "あの駅の箱は、周",
+   "audioTime": 261.5467
+  },
+  {
+   "id": "reveal-031-glow",
+   "kind": "internal-reveal",
+   "sceneId": "scene-031",
+   "label": "現代の隠れ家",
+   "audioTime": 268.9009,
+   "visualFrame": 8067
+  },
+  {
+   "id": "cut-032",
+   "kind": "scene-cut",
+   "sceneId": "scene-032",
+   "label": "あなたは、あの狭",
+   "audioTime": 271.0967
+  },
+  {
+   "id": "reveal-032-question",
+   "kind": "internal-reveal",
+   "sceneId": "scene-032",
+   "label": "言い切れますか",
+   "audioTime": 276.0496,
+   "visualFrame": 8281
+  },
+  {
+   "id": "cut-033",
+   "kind": "scene-cut",
+   "sceneId": "scene-033",
+   "label": "社会を科学する。",
+   "audioTime": 278.5667
+  },
+  {
+   "id": "cut-034",
+   "kind": "scene-cut",
+   "sceneId": "scene-034",
+   "label": "もしあなたが駅の",
+   "audioTime": 280.5167
+  },
+  {
+   "id": "reveal-034-comment",
+   "kind": "internal-reveal",
+   "sceneId": "scene-034",
+   "label": "コメント欄",
+   "audioTime": 284.9725,
+   "visualFrame": 8549
+  },
+  {
+   "id": "cut-035",
+   "kind": "scene-cut",
+   "sceneId": "scene-035",
+   "label": "次回もニュースを",
+   "audioTime": 287.2667
+  },
+  {
+   "id": "reveal-035-button",
+   "kind": "internal-reveal",
+   "sceneId": "scene-035",
+   "label": "チャンネル登録",
+   "audioTime": 289.8767,
+   "visualFrame": 8696
+  }
+ ]
+}
