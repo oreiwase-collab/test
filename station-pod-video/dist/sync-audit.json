@@ -2,11 +2,9 @@
   "ok": true,
   "project": "/home/user/test/station-pod-video",
   "anchorsFile": "/home/user/test/station-pod-video/inputs/sync-anchors.json",
-  "checkedAt": "2026-09-27T19:34:31.062Z",
+  "checkedAt": "2026-09-27T19:51:22.537Z",
   "errors": [],
-  "warnings": [
-    "finished-video cut detection was skipped; pass --video after rendering"
-  ],
+  "warnings": [],
   "anchors": [
     {
       "id": "reveal-001-kp",
@@ -929,5 +927,41 @@
       "errorMs": 0
     }
   ],
-  "detectedCuts": []
+  "detectedCuts": [
+    6.1,
+    13.833333,
+    28.433333,
+    32.566667,
+    40.333333,
+    48.833333,
+    55.833333,
+    63.7,
+    73.566667,
+    81.133333,
+    88.166667,
+    90.866667,
+    100.066667,
+    109,
+    121.1,
+    131,
+    140.133333,
+    150.366667,
+    163.133333,
+    174.433333,
+    182.633333,
+    190.966667,
+    203,
+    214.666667,
+    227.8,
+    240.133333,
+    248.2,
+    260.666667,
+    275.033333,
+    284.8,
+    295.933333,
+    304.566667,
+    307.633333,
+    316,
+    323.166667
+  ]
 }
