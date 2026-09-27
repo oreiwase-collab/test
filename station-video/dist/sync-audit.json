@@ -1,11 +1,9 @@
 {
-  "ok": false,
+  "ok": true,
   "project": "/home/user/test/station-video",
   "anchorsFile": "/home/user/test/station-video/inputs/sync-anchors.json",
-  "checkedAt": "2026-09-27T16:59:05.503Z",
-  "errors": [
-    "finished video has no detected hard cut near 129.833s for \"この問題は、1人\""
-  ],
+  "checkedAt": "2026-09-27T17:11:32.556Z",
+  "errors": [],
   "warnings": [],
   "anchors": [
     {
@@ -1105,6 +1103,7 @@
     100.066667,
     109,
     121.1,
+    129.833333,
     137.366667,
     146.266667,
     157.566667,

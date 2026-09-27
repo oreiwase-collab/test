@@ -2,8 +2,8 @@
   "ok": true,
   "project": "/home/user/test/station-video",
   "video": "/home/user/test/station-video/out/final.mp4",
-  "bytes": 59075793,
-  "checkedAt": "2026-09-27T16:58:55.104Z",
+  "bytes": 59032082,
+  "checkedAt": "2026-09-27T17:11:22.517Z",
   "errors": [],
   "probe": {
     "programs": [],
@@ -28,7 +28,7 @@
       }
     ],
     "format": {
-      "duration": "291.925333"
+      "duration": "291.900000"
     }
   }
 }
