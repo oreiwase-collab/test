@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "timingSource": "../station-pod-video/inputs/asr/narration.json",
+  "anchors": [
+    {
+      "id": "reveal-001-kp",
+      "kind": "internal-reveal",
+      "sceneId": "scene-001",
+      "label": "絶対",
+      "audioTime": 3.841,
+      "visualFrame": 115
+    },
+    {
+      "id": "reveal-002-enter",
+      "kind": "internal-reveal",
+      "sceneId": "scene-002",
+      "label": "箱に入る",
+      "audioTime": 8.884,
+      "visualFrame": 267
+    },
+    {
+      "id": "reveal-002-kp",
+      "kind": "internal-reveal",
+      "sceneId": "scene-002",
+      "label": "勘違い",
+      "audioTime": 12.042,
+      "visualFrame": 361
+    },
+    {
+      "id": "cut-002",
+      "kind": "scene-cut",
+      "sceneId": "scene-002",
+      "label": "でもたった畳1枚",
+      "audioTime": 6.112
+    },
+    {
+      "id": "reveal-003-pod",
+      "kind": "internal-reveal",
+      "sceneId": "scene-003",
+      "label": "ステーションポッド",
+      "audioTime": 19.896,
+      "visualFrame": 597
+    },
+    {
+      "id": "reveal-003-sns",
+      "kind": "internal-reveal",
+      "sceneId": "scene-003",
+      "label": "動画がネット",
+      "audioTime": 23.576,
+      "visualFrame": 707
+    },
+    {
+      "id": "reveal-003-police",
+      "kind": "internal-reveal",
+      "sceneId": "scene-003",
+      "label": "警察",
+      "audioTime": 25.016,
+      "visualFrame": 750
+    },
+    {
+      "id": "cut-003",
+      "kind": "scene-cut",
+      "sceneId": "scene-003",
+      "label": "2026年9月都",
+      "audioTime": 13.827
+    }
+  ]
+}
